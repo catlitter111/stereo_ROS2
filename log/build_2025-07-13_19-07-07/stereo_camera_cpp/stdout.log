@@ -1,0 +1,37 @@
+[ 33%] Built target stereo_camera_cpp_lib
+Consolidate compiler generated dependencies of target stereo_camera_ros2_node
+[ 66%] Built target stereo_camera_demo
+[ 83%] Building CXX object CMakeFiles/stereo_camera_ros2_node.dir/src/stereo_camera_ros2_node.cpp.o
+[100%] Linking CXX executable stereo_camera_ros2_node
+[100%] Built target stereo_camera_ros2_node
+-- Install configuration: ""
+-- Up-to-date: /userdata/stereo_demo/install/stereo_camera_cpp/lib/stereo_camera_cpp/libstereo_camera_cpp_lib.a
+-- Up-to-date: /userdata/stereo_demo/install/stereo_camera_cpp/lib/stereo_camera_cpp/stereo_camera_demo
+-- Installing: /userdata/stereo_demo/install/stereo_camera_cpp/lib/stereo_camera_cpp/stereo_camera_ros2_node
+-- Set runtime path of "/userdata/stereo_demo/install/stereo_camera_cpp/lib/stereo_camera_cpp/stereo_camera_ros2_node" to ""
+-- Up-to-date: /userdata/stereo_demo/install/stereo_camera_cpp/include
+-- Up-to-date: /userdata/stereo_demo/install/stereo_camera_cpp/include/stereo_camera.h
+-- Up-to-date: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/launch
+-- Up-to-date: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/launch/stereo_camera.launch.py
+-- Up-to-date: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/config
+-- Up-to-date: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/config/stereo_camera_params.yaml
+-- Up-to-date: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/environment/library_path.sh
+-- Up-to-date: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/environment/library_path.dsv
+-- Up-to-date: /userdata/stereo_demo/install/stereo_camera_cpp/share/ament_index/resource_index/package_run_dependencies/stereo_camera_cpp
+-- Up-to-date: /userdata/stereo_demo/install/stereo_camera_cpp/share/ament_index/resource_index/parent_prefix_path/stereo_camera_cpp
+-- Up-to-date: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/environment/ament_prefix_path.sh
+-- Up-to-date: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/environment/ament_prefix_path.dsv
+-- Up-to-date: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/environment/path.sh
+-- Up-to-date: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/environment/path.dsv
+-- Up-to-date: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/local_setup.bash
+-- Up-to-date: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/local_setup.sh
+-- Up-to-date: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/local_setup.zsh
+-- Up-to-date: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/local_setup.dsv
+-- Installing: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/package.dsv
+-- Up-to-date: /userdata/stereo_demo/install/stereo_camera_cpp/share/ament_index/resource_index/packages/stereo_camera_cpp
+-- Up-to-date: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Up-to-date: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/cmake/ament_cmake_export_libraries-extras.cmake
+-- Up-to-date: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Up-to-date: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/cmake/stereo_camera_cppConfig.cmake
+-- Up-to-date: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/cmake/stereo_camera_cppConfig-version.cmake
+-- Up-to-date: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/package.xml

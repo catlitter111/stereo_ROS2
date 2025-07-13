@@ -1,0 +1,38 @@
+# 双目相机配置文件
+# 适用于 ROS2 Humble
+
+stereo_camera_node:
+  ros__parameters:
+    # 相机硬件参数
+    camera_id: 21
+    frame_width: 1280
+    frame_height: 480
+    process_width: 640
+    process_height: 480
+    
+    # 发布参数
+    publish_rate: 30.0
+    camera_frame_id: "stereo_camera"
+    
+    # 立体匹配参数
+    stereo_matcher:
+      num_disparities: 96
+      block_size: 15
+      min_disparity: 18
+      pre_filter_cap: 31
+      texture_threshold: 50
+      uniqueness_ratio: 18
+      speckle_window_size: 83
+      speckle_range: 32
+      disp12_max_diff: 1
+    
+    # 距离约束
+    distance_constraints:
+      min_valid_distance: 0.2  # 米
+      max_valid_distance: 5.0  # 米
+    
+    # 调试选项
+    debug:
+      enable_debug_output: false
+      save_debug_images: false
+      debug_image_path: "/tmp/stereo_debug"

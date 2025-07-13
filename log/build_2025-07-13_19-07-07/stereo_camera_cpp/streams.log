@@ -1,0 +1,41 @@
+[0.018s] Invoking command in '/userdata/stereo_demo/build/stereo_camera_cpp': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/userdata/try_again/SelfFollowingROS2/install/following_robot:/userdata/try_again/SelfFollowingROS2/install/dlrobot_robot_python:/userdata/ros2_astra_camera/install/astra_depth_reader:/opt/ros/humble /usr/bin/cmake --build /userdata/stereo_demo/build/stereo_camera_cpp -- -j8 -l8
+[0.216s] [ 33%] Built target stereo_camera_cpp_lib
+[0.275s] Consolidate compiler generated dependencies of target stereo_camera_ros2_node
+[0.341s] [ 66%] Built target stereo_camera_demo
+[0.362s] [ 83%] Building CXX object CMakeFiles/stereo_camera_ros2_node.dir/src/stereo_camera_ros2_node.cpp.o
+[11.486s] [100%] Linking CXX executable stereo_camera_ros2_node
+[12.663s] [100%] Built target stereo_camera_ros2_node
+[12.701s] Invoked command in '/userdata/stereo_demo/build/stereo_camera_cpp' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/userdata/try_again/SelfFollowingROS2/install/following_robot:/userdata/try_again/SelfFollowingROS2/install/dlrobot_robot_python:/userdata/ros2_astra_camera/install/astra_depth_reader:/opt/ros/humble /usr/bin/cmake --build /userdata/stereo_demo/build/stereo_camera_cpp -- -j8 -l8
+[12.750s] Invoking command in '/userdata/stereo_demo/build/stereo_camera_cpp': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/userdata/try_again/SelfFollowingROS2/install/following_robot:/userdata/try_again/SelfFollowingROS2/install/dlrobot_robot_python:/userdata/ros2_astra_camera/install/astra_depth_reader:/opt/ros/humble /usr/bin/cmake --install /userdata/stereo_demo/build/stereo_camera_cpp
+[12.778s] -- Install configuration: ""
+[12.778s] -- Up-to-date: /userdata/stereo_demo/install/stereo_camera_cpp/lib/stereo_camera_cpp/libstereo_camera_cpp_lib.a
+[12.781s] -- Up-to-date: /userdata/stereo_demo/install/stereo_camera_cpp/lib/stereo_camera_cpp/stereo_camera_demo
+[12.781s] -- Installing: /userdata/stereo_demo/install/stereo_camera_cpp/lib/stereo_camera_cpp/stereo_camera_ros2_node
+[12.784s] -- Set runtime path of "/userdata/stereo_demo/install/stereo_camera_cpp/lib/stereo_camera_cpp/stereo_camera_ros2_node" to ""
+[12.785s] -- Up-to-date: /userdata/stereo_demo/install/stereo_camera_cpp/include
+[12.787s] -- Up-to-date: /userdata/stereo_demo/install/stereo_camera_cpp/include/stereo_camera.h
+[12.787s] -- Up-to-date: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/launch
+[12.788s] -- Up-to-date: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/launch/stereo_camera.launch.py
+[12.788s] -- Up-to-date: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/config
+[12.789s] -- Up-to-date: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/config/stereo_camera_params.yaml
+[12.790s] -- Up-to-date: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/environment/library_path.sh
+[12.793s] -- Up-to-date: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/environment/library_path.dsv
+[12.794s] -- Up-to-date: /userdata/stereo_demo/install/stereo_camera_cpp/share/ament_index/resource_index/package_run_dependencies/stereo_camera_cpp
+[12.795s] -- Up-to-date: /userdata/stereo_demo/install/stereo_camera_cpp/share/ament_index/resource_index/parent_prefix_path/stereo_camera_cpp
+[12.795s] -- Up-to-date: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/environment/ament_prefix_path.sh
+[12.796s] -- Up-to-date: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/environment/ament_prefix_path.dsv
+[12.797s] -- Up-to-date: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/environment/path.sh
+[12.798s] -- Up-to-date: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/environment/path.dsv
+[12.799s] -- Up-to-date: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/local_setup.bash
+[12.800s] -- Up-to-date: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/local_setup.sh
+[12.801s] -- Up-to-date: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/local_setup.zsh
+[12.803s] -- Up-to-date: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/local_setup.dsv
+[12.804s] -- Installing: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/package.dsv
+[12.804s] -- Up-to-date: /userdata/stereo_demo/install/stereo_camera_cpp/share/ament_index/resource_index/packages/stereo_camera_cpp
+[12.805s] -- Up-to-date: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/cmake/ament_cmake_export_include_directories-extras.cmake
+[12.806s] -- Up-to-date: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/cmake/ament_cmake_export_libraries-extras.cmake
+[12.807s] -- Up-to-date: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/cmake/ament_cmake_export_dependencies-extras.cmake
+[12.807s] -- Up-to-date: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/cmake/stereo_camera_cppConfig.cmake
+[12.808s] -- Up-to-date: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/cmake/stereo_camera_cppConfig-version.cmake
+[12.809s] -- Up-to-date: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/package.xml
+[12.810s] Invoked command in '/userdata/stereo_demo/build/stereo_camera_cpp' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/userdata/try_again/SelfFollowingROS2/install/following_robot:/userdata/try_again/SelfFollowingROS2/install/dlrobot_robot_python:/userdata/ros2_astra_camera/install/astra_depth_reader:/opt/ros/humble /usr/bin/cmake --install /userdata/stereo_demo/build/stereo_camera_cpp

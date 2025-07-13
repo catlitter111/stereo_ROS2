@@ -1,0 +1,42 @@
+/userdata/stereo_demo/src/stereo_camera.cpp: In member function ‘bool stereo_vision::StereoCamera::initialize_stereo_matcher()’:
+/userdata/stereo_demo/src/stereo_camera.cpp:187:48: error: no match for ‘operator=’ (operand types are ‘std::unique_ptr<cv::StereoBM>’ and ‘cv::Ptr<cv::StereoBM>’)
+  187 |         stereo_matcher_ = cv::StereoBM::create();
+      |                                                ^
+In file included from /usr/include/c++/11/memory:76,
+                 from /usr/include/opencv4/opencv2/core/cvstd_wrapper.hpp:11,
+                 from /usr/include/opencv4/opencv2/core/cvstd.hpp:81,
+                 from /usr/include/opencv4/opencv2/core/base.hpp:58,
+                 from /usr/include/opencv4/opencv2/core.hpp:53,
+                 from /usr/include/opencv4/opencv2/opencv.hpp:52,
+                 from /userdata/stereo_demo/include/stereo_camera.h:3,
+                 from /userdata/stereo_demo/src/stereo_camera.cpp:1:
+/usr/include/c++/11/bits/unique_ptr.h:386:9: note: candidate: ‘template<class _Up, class _Ep> typename std::enable_if<std::__and_<std::__and_<std::is_convertible<typename std::unique_ptr<_Up, _Ep>::pointer, typename std::__uniq_ptr_impl<_Tp, _Dp>::pointer>, std::__not_<std::is_array<_Up> > >, std::is_assignable<_T2&, _U2&&> >::value, std::unique_ptr<_Tp, _Dp>&>::type std::unique_ptr<_Tp, _Dp>::operator=(std::unique_ptr<_Up, _Ep>&&) [with _Up = _Up; _Ep = _Ep; _Tp = cv::StereoBM; _Dp = std::default_delete<cv::StereoBM>]’
+  386 |         operator=(unique_ptr<_Up, _Ep>&& __u) noexcept
+      |         ^~~~~~~~
+/usr/include/c++/11/bits/unique_ptr.h:386:9: note:   template argument deduction/substitution failed:
+/userdata/stereo_demo/src/stereo_camera.cpp:187:48: note:   ‘cv::Ptr<cv::StereoBM>’ is not derived from ‘std::unique_ptr<_Tp, _Dp>’
+  187 |         stereo_matcher_ = cv::StereoBM::create();
+      |                                                ^
+In file included from /usr/include/c++/11/memory:76,
+                 from /usr/include/opencv4/opencv2/core/cvstd_wrapper.hpp:11,
+                 from /usr/include/opencv4/opencv2/core/cvstd.hpp:81,
+                 from /usr/include/opencv4/opencv2/core/base.hpp:58,
+                 from /usr/include/opencv4/opencv2/core.hpp:53,
+                 from /usr/include/opencv4/opencv2/opencv.hpp:52,
+                 from /userdata/stereo_demo/include/stereo_camera.h:3,
+                 from /userdata/stereo_demo/src/stereo_camera.cpp:1:
+/usr/include/c++/11/bits/unique_ptr.h:371:19: note: candidate: ‘std::unique_ptr<_Tp, _Dp>& std::unique_ptr<_Tp, _Dp>::operator=(std::unique_ptr<_Tp, _Dp>&&) [with _Tp = cv::StereoBM; _Dp = std::default_delete<cv::StereoBM>]’
+  371 |       unique_ptr& operator=(unique_ptr&&) = default;
+      |                   ^~~~~~~~
+/usr/include/c++/11/bits/unique_ptr.h:371:29: note:   no known conversion for argument 1 from ‘cv::Ptr<cv::StereoBM>’ to ‘std::unique_ptr<cv::StereoBM>&&’
+  371 |       unique_ptr& operator=(unique_ptr&&) = default;
+      |                             ^~~~~~~~~~~~
+/usr/include/c++/11/bits/unique_ptr.h:395:7: note: candidate: ‘std::unique_ptr<_Tp, _Dp>& std::unique_ptr<_Tp, _Dp>::operator=(std::nullptr_t) [with _Tp = cv::StereoBM; _Dp = std::default_delete<cv::StereoBM>; std::nullptr_t = std::nullptr_t]’
+  395 |       operator=(nullptr_t) noexcept
+      |       ^~~~~~~~
+/usr/include/c++/11/bits/unique_ptr.h:395:17: note:   no known conversion for argument 1 from ‘cv::Ptr<cv::StereoBM>’ to ‘std::nullptr_t’
+  395 |       operator=(nullptr_t) noexcept
+      |                 ^~~~~~~~~
+gmake[2]: *** [CMakeFiles/stereo_camera_cpp_lib.dir/build.make:76: CMakeFiles/stereo_camera_cpp_lib.dir/src/stereo_camera.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:141: CMakeFiles/stereo_camera_cpp_lib.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

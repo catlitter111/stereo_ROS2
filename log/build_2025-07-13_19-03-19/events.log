@@ -1,0 +1,225 @@
+[0.000000] (-) TimerEvent: {}
+[0.000212] (stereo_camera_cpp) JobQueued: {'identifier': 'stereo_camera_cpp', 'dependencies': OrderedDict()}
+[0.000860] (stereo_camera_cpp) JobStarted: {'identifier': 'stereo_camera_cpp'}
+[0.015771] (stereo_camera_cpp) JobProgress: {'identifier': 'stereo_camera_cpp', 'progress': 'cmake'}
+[0.017026] (stereo_camera_cpp) JobProgress: {'identifier': 'stereo_camera_cpp', 'progress': 'build'}
+[0.018358] (stereo_camera_cpp) Command: {'cmd': ['/usr/bin/cmake', '--build', '/userdata/stereo_demo/build/stereo_camera_cpp', '--', '-j8', '-l8'], 'cwd': '/userdata/stereo_demo/build/stereo_camera_cpp', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('UMS_MOUNTPOINT', '/mnt/ums'), ('NODE_EXTRA_CA_CERTS', '/home/monster/.nvm/versions/node/v22.17.0/lib/node_modules/@anthropic-ai/claude-code/ca.pem'), ('USER', 'monster'), ('CLAUDE_CODE_ENTRYPOINT', 'cli'), ('DISABLE_TELEMETRY', '1'), ('XAUTHLOCALHOSTNAME', ''), ('GIT_EDITOR', 'true'), ('USER_ID', '4916'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/tmp/.mount_CursoriobhbK/usr/share/cursor/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('USB_FUNCS', 'adb'), ('LD_LIBRARY_PATH', '/userdata/try_again/SelfFollowingROS2/install/turn_on_dlrobot_robot/lib:/userdata/try_again/SelfFollowingROS2/install/serial/lib:/userdata/try_again/SelfFollowingROS2/install/rfid_reader/lib:/userdata/try_again/SelfFollowingROS2/install/dlrobot_robot_msg/lib:/userdata/try_again/SelfFollowingROS2/install/custom_msgs/lib:/userdata/try_again/SelfFollowingROS2/install/ackermann_msgs/lib:/userdata/ros2_astra_camera/install/astra_camera/lib:/userdata/ros2_astra_camera/install/astra_camera_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/tmp/.mount_CursoriobhbK/usr/lib/:/tmp/.mount_CursoriobhbK/usr/lib32/:/tmp/.mount_CursoriobhbK/usr/lib64/:/tmp/.mount_CursoriobhbK/lib/:/tmp/.mount_CursoriobhbK/lib/i386-linux-gnu/:/tmp/.mount_CursoriobhbK/lib/x86_64-linux-gnu/:/tmp/.mount_CursoriobhbK/lib/aarch64-linux-gnu/:/tmp/.mount_CursoriobhbK/lib32/:/tmp/.mount_CursoriobhbK/lib64/:'), ('HOME', '/home/monster'), ('CHROME_DESKTOP', 'cursor.desktop'), ('APPDIR', '/tmp/.mount_CursoriobhbK'), ('TERM_PROGRAM_VERSION', '1.2.4'), ('DESKTOP_SESSION', 'ubuntu'), ('NVM_BIN', '/home/monster/.nvm/versions/node/v22.17.0/bin'), ('NVM_INC', '/home/monster/.nvm/versions/node/v22.17.0/include/node'), ('PERLLIB', '/tmp/.mount_CursoriobhbK/usr/share/perl5/:/tmp/.mount_CursoriobhbK/usr/lib/perl5/:'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/tmp/.mount_CursoriobhbK/usr/share/cursor/resources/app/extensions/git/dist/askpass-main.js'), ('NODE_NO_WARNINGS', '1'), ('VSCODE_GIT_ASKPASS_NODE', '/tmp/.mount_CursoriobhbK/usr/share/cursor/cursor'), ('MANAGERPID', '1183'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '1594'), ('BUNDLED_DEBUGPY_PATH', '/home/monster/.cursor/extensions/ms-python.debugpy-2025.6.0-linux-arm64/bundled/libs/debugpy'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=fba7d08a13d8f97f8c0e3f7a6873890c'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '4066'), ('NVM_DIR', '/home/monster/.nvm'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/userdata/ros2_astra_camera/install:/userdata/STP23_ROS2_SDK/stp23_ros2_ws/install:/userdata/try_again/SelfFollowingROS2/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'fcitx'), ('LOGNAME', 'monster'), ('OWD', '/home/monster/Downloads'), ('JOURNAL_STREAM', '8:33410'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('CLAUDE_CODE_SSE_PORT', '49501'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'monster'), ('ANTHROPIC_BASE_URL', 'https://gaccode.com/claudecode'), ('TERM', 'xterm-256color'), ('OTEL_EXPORTER_OTLP_METRICS_TEMPORALITY_PREFERENCE', 'delta'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/monster/.local/bin:/home/monster/.local/bin:/home/monster/.nvm/versions/node/v22.17.0/bin:/home/monster/.local/bin:/opt/ros/humble/bin:/tmp/.mount_CursoriobhbK/usr/bin/:/tmp/.mount_CursoriobhbK/usr/sbin/:/tmp/.mount_CursoriobhbK/usr/games/:/tmp/.mount_CursoriobhbK/bin/:/tmp/.mount_CursoriobhbK/sbin/:/home/monster/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/monster/.cursor/extensions/ms-python.debugpy-2025.6.0-linux-arm64/bundled/scripts/noConfigScripts'), ('SESSION_MANAGER', 'local/EAI-BOX2000:@/tmp/.ICE-unix/1594,unix/EAI-BOX2000:/tmp/.ICE-unix/1594'), ('INVOCATION_ID', 'e99ed482836348688359c4dc8e132514'), ('APPIMAGE', '/home/monster/Downloads/Cursor-1.1.5-aarch64.AppImage'), ('COREPACK_ENABLE_AUTO_PIN', '0'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('ADBD_SHELL', '/bin/bash'), ('DISPLAY', ':0'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/monster/.cursor/extensions/ms-python.debugpy-2025.6.0-linux-arm64/.noConfigDebugAdapterEndpoints/endpoint-7a22d6f0a2509e84.txt'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('XMODIFIERS', '@im=fcitx'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-8c5cce201a.sock'), ('TERM_PROGRAM', 'vscode'), ('CURSOR_TRACE_ID', '41e7ee2abfe5428888603d82bcd6f82f'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('GSETTINGS_SCHEMA_DIR', '/tmp/.mount_CursoriobhbK/usr/share/glib-2.0/schemas/:'), ('UMS_SIZE', '256M'), ('AMENT_PREFIX_PATH', '/userdata/try_again/SelfFollowingROS2/install/following_robot:/userdata/try_again/SelfFollowingROS2/install/turn_on_dlrobot_robot:/userdata/try_again/SelfFollowingROS2/install/serial:/userdata/try_again/SelfFollowingROS2/install/rfid_reader:/userdata/try_again/SelfFollowingROS2/install/dlrobot_robot_python:/userdata/try_again/SelfFollowingROS2/install/dlrobot_robot_msg:/userdata/try_again/SelfFollowingROS2/install/custom_msgs:/userdata/try_again/SelfFollowingROS2/install/ackermann_msgs:/userdata/ros2_astra_camera/install/astra_depth_reader:/userdata/ros2_astra_camera/install/astra_camera:/userdata/ros2_astra_camera/install/astra_camera_msgs:/userdata/STP23_ROS2_SDK/stp23_ros2_ws/install/ldlidar:/opt/ros/humble'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/bin/bash'), ('ARGV0', '/home/monster/Downloads/Cursor-1.1.5-aarch64.AppImage'), ('QT_ACCESSIBILITY', '1'), ('UMS_RO', '0'), ('USER_EMAIL', '13921994762@163.com'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CLAUDECODE', '1'), ('UMS_FSTYPE', 'vfat'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('AUTH_TOKEN', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQ5MTYsImVtYWlsIjoiMTM5MjE5OTQ3NjJAMTYzLmNvbSIsImFjY2Vzc1Rva2VuIjoiYWIzOWE3NWRjZThmNTI0N2Y1ODhjMWQ5N2YyNjk3ZDMyZTI2NTI0N2Q0NjRkZGE2MDdhYTUxZjMyMmU0NGI5OCIsImlhdCI6MTc1MjM2NjI5MSwiZXhwIjoxNzU0OTU4MjkxfQ.DQxya2YBYkUim8KLrf-bQ0Ma8DqPkP-zRm64izWtges'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('QT_IM_MODULE', 'fcitx'), ('PWD', '/userdata/stereo_demo/build/stereo_camera_cpp'), ('ENABLE_IDE_INTEGRATION', 'true'), ('DISABLE_AUTOUPDATER', '1'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CLUTTER_IM_MODULE', 'xim'), ('NVM_CD_FLAGS', ''), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=fba7d08a13d8f97f8c0e3f7a6873890c'), ('XDG_DATA_DIRS', '/tmp/.mount_CursoriobhbK/usr/share/:/usr/local/share:/usr/share:/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/'), ('CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC', '1'), ('ADB_TCP_PORT', '5555'), ('PYTHONPATH', '/userdata/try_again/SelfFollowingROS2/install/following_robot/lib/python3.10/site-packages:/userdata/try_again/SelfFollowingROS2/install/turn_on_dlrobot_robot/local/lib/python3.10/dist-packages:/userdata/try_again/SelfFollowingROS2/install/rfid_reader/local/lib/python3.10/dist-packages:/userdata/try_again/SelfFollowingROS2/install/rfid_reader/lib/python3.10/site-packages:/userdata/try_again/SelfFollowingROS2/install/dlrobot_robot_python/lib/python3.10/site-packages:/userdata/try_again/SelfFollowingROS2/install/dlrobot_robot_msg/local/lib/python3.10/dist-packages:/userdata/try_again/SelfFollowingROS2/install/custom_msgs/local/lib/python3.10/dist-packages:/userdata/try_again/SelfFollowingROS2/install/ackermann_msgs/local/lib/python3.10/dist-packages:/userdata/ros2_astra_camera/install/astra_depth_reader/lib/python3.10/site-packages:/userdata/ros2_astra_camera/install/astra_camera_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('UMS_MOUNT', '0'), ('QT_PLUGIN_PATH', '/tmp/.mount_CursoriobhbK/usr/lib/qt4/plugins/:/tmp/.mount_CursoriobhbK/usr/lib/i386-linux-gnu/qt4/plugins/:/tmp/.mount_CursoriobhbK/usr/lib/x86_64-linux-gnu/qt4/plugins/:/tmp/.mount_CursoriobhbK/usr/lib/aarch64-linux-gnu/qt4/plugins/:/tmp/.mount_CursoriobhbK/usr/lib32/qt4/plugins/:/tmp/.mount_CursoriobhbK/usr/lib64/qt4/plugins/:/tmp/.mount_CursoriobhbK/usr/lib/qt5/plugins/:/tmp/.mount_CursoriobhbK/usr/lib/i386-linux-gnu/qt5/plugins/:/tmp/.mount_CursoriobhbK/usr/lib/x86_64-linux-gnu/qt5/plugins/:/tmp/.mount_CursoriobhbK/usr/lib/aarch64-linux-gnu/qt5/plugins/:/tmp/.mount_CursoriobhbK/usr/lib32/qt5/plugins/:/tmp/.mount_CursoriobhbK/usr/lib64/qt5/plugins/:'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/userdata/try_again/SelfFollowingROS2/install/turn_on_dlrobot_robot:/userdata/try_again/SelfFollowingROS2/install/serial:/userdata/try_again/SelfFollowingROS2/install/rfid_reader:/userdata/try_again/SelfFollowingROS2/install/dlrobot_robot_msg:/userdata/try_again/SelfFollowingROS2/install/custom_msgs:/userdata/try_again/SelfFollowingROS2/install/ackermann_msgs:/userdata/ros2_astra_camera/install/astra_camera:/userdata/ros2_astra_camera/install/astra_camera_msgs:/userdata/STP23_ROS2_SDK/stp23_ros2_ws/install/ldlidar:/userdata/try_again/SelfFollowingROS2/install/following_robot:/userdata/try_again/SelfFollowingROS2/install/dlrobot_robot_python:/userdata/ros2_astra_camera/install/astra_depth_reader:/opt/ros/humble'), ('UMS_FILE', '/userdata/ums_shared.img')]), 'shell': False}
+[0.099531] (-) TimerEvent: {}
+[0.166870] (stereo_camera_cpp) StdoutLine: {'line': b'Consolidate compiler generated dependencies of target stereo_camera_cpp_lib\n'}
+[0.199628] (-) TimerEvent: {}
+[0.215811] (stereo_camera_cpp) StdoutLine: {'line': b'[ 16%] Building CXX object CMakeFiles/stereo_camera_cpp_lib.dir/src/stereo_camera.cpp.o\n'}
+[0.299953] (-) TimerEvent: {}
+[0.400538] (-) TimerEvent: {}
+[0.501097] (-) TimerEvent: {}
+[0.601603] (-) TimerEvent: {}
+[0.702134] (-) TimerEvent: {}
+[0.802598] (-) TimerEvent: {}
+[0.903237] (-) TimerEvent: {}
+[1.003777] (-) TimerEvent: {}
+[1.104401] (-) TimerEvent: {}
+[1.205021] (-) TimerEvent: {}
+[1.305419] (-) TimerEvent: {}
+[1.405776] (-) TimerEvent: {}
+[1.506040] (-) TimerEvent: {}
+[1.606384] (-) TimerEvent: {}
+[1.706754] (-) TimerEvent: {}
+[1.807031] (-) TimerEvent: {}
+[1.907328] (-) TimerEvent: {}
+[2.007767] (-) TimerEvent: {}
+[2.108235] (-) TimerEvent: {}
+[2.208750] (-) TimerEvent: {}
+[2.309454] (-) TimerEvent: {}
+[2.410121] (-) TimerEvent: {}
+[2.510538] (-) TimerEvent: {}
+[2.611072] (-) TimerEvent: {}
+[2.711693] (-) TimerEvent: {}
+[2.812241] (-) TimerEvent: {}
+[2.912947] (-) TimerEvent: {}
+[3.013696] (-) TimerEvent: {}
+[3.114512] (-) TimerEvent: {}
+[3.215417] (-) TimerEvent: {}
+[3.315946] (-) TimerEvent: {}
+[3.416617] (-) TimerEvent: {}
+[3.517427] (-) TimerEvent: {}
+[3.617877] (-) TimerEvent: {}
+[3.718321] (-) TimerEvent: {}
+[3.818712] (-) TimerEvent: {}
+[3.919009] (-) TimerEvent: {}
+[4.019397] (-) TimerEvent: {}
+[4.120155] (-) TimerEvent: {}
+[4.170687] (stereo_camera_cpp) StdoutLine: {'line': b'[ 33%] Linking CXX static library libstereo_camera_cpp_lib.a\n'}
+[4.220508] (-) TimerEvent: {}
+[4.312502] (stereo_camera_cpp) StdoutLine: {'line': b'[ 33%] Built target stereo_camera_cpp_lib\n'}
+[4.320726] (-) TimerEvent: {}
+[4.393352] (stereo_camera_cpp) StdoutLine: {'line': b'[ 50%] Building CXX object CMakeFiles/stereo_camera_demo.dir/src/main.cpp.o\n'}
+[4.421126] (-) TimerEvent: {}
+[4.422241] (stereo_camera_cpp) StdoutLine: {'line': b'[ 66%] Building CXX object CMakeFiles/stereo_camera_ros2_node.dir/src/stereo_camera_ros2_node.cpp.o\n'}
+[4.521279] (-) TimerEvent: {}
+[4.621779] (-) TimerEvent: {}
+[4.722361] (-) TimerEvent: {}
+[4.822887] (-) TimerEvent: {}
+[4.923665] (-) TimerEvent: {}
+[5.024187] (-) TimerEvent: {}
+[5.124800] (-) TimerEvent: {}
+[5.225408] (-) TimerEvent: {}
+[5.326030] (-) TimerEvent: {}
+[5.426620] (-) TimerEvent: {}
+[5.527205] (-) TimerEvent: {}
+[5.627757] (-) TimerEvent: {}
+[5.728335] (-) TimerEvent: {}
+[5.828949] (-) TimerEvent: {}
+[5.930304] (-) TimerEvent: {}
+[6.031354] (-) TimerEvent: {}
+[6.131801] (-) TimerEvent: {}
+[6.232388] (-) TimerEvent: {}
+[6.333010] (-) TimerEvent: {}
+[6.433563] (-) TimerEvent: {}
+[6.534230] (-) TimerEvent: {}
+[6.635087] (-) TimerEvent: {}
+[6.735945] (-) TimerEvent: {}
+[6.836639] (-) TimerEvent: {}
+[6.937241] (-) TimerEvent: {}
+[7.037906] (-) TimerEvent: {}
+[7.138562] (-) TimerEvent: {}
+[7.239211] (-) TimerEvent: {}
+[7.339875] (-) TimerEvent: {}
+[7.440311] (-) TimerEvent: {}
+[7.540686] (-) TimerEvent: {}
+[7.641128] (-) TimerEvent: {}
+[7.741581] (-) TimerEvent: {}
+[7.842023] (-) TimerEvent: {}
+[7.942486] (-) TimerEvent: {}
+[7.987803] (stereo_camera_cpp) StdoutLine: {'line': b'[ 83%] Linking CXX executable stereo_camera_demo\n'}
+[8.042820] (-) TimerEvent: {}
+[8.143407] (-) TimerEvent: {}
+[8.243856] (-) TimerEvent: {}
+[8.344344] (-) TimerEvent: {}
+[8.444923] (-) TimerEvent: {}
+[8.545491] (-) TimerEvent: {}
+[8.646035] (-) TimerEvent: {}
+[8.746620] (-) TimerEvent: {}
+[8.847139] (-) TimerEvent: {}
+[8.947614] (-) TimerEvent: {}
+[9.048232] (-) TimerEvent: {}
+[9.148729] (-) TimerEvent: {}
+[9.249188] (-) TimerEvent: {}
+[9.281025] (stereo_camera_cpp) StdoutLine: {'line': b'[ 83%] Built target stereo_camera_demo\n'}
+[9.349373] (-) TimerEvent: {}
+[9.449949] (-) TimerEvent: {}
+[9.550526] (-) TimerEvent: {}
+[9.651273] (-) TimerEvent: {}
+[9.751799] (-) TimerEvent: {}
+[9.852485] (-) TimerEvent: {}
+[9.953264] (-) TimerEvent: {}
+[10.053982] (-) TimerEvent: {}
+[10.154550] (-) TimerEvent: {}
+[10.255004] (-) TimerEvent: {}
+[10.355613] (-) TimerEvent: {}
+[10.456164] (-) TimerEvent: {}
+[10.556678] (-) TimerEvent: {}
+[10.657131] (-) TimerEvent: {}
+[10.757605] (-) TimerEvent: {}
+[10.858203] (-) TimerEvent: {}
+[10.959962] (-) TimerEvent: {}
+[11.060694] (-) TimerEvent: {}
+[11.161428] (-) TimerEvent: {}
+[11.262099] (-) TimerEvent: {}
+[11.362581] (-) TimerEvent: {}
+[11.463632] (-) TimerEvent: {}
+[11.564239] (-) TimerEvent: {}
+[11.664881] (-) TimerEvent: {}
+[11.765646] (-) TimerEvent: {}
+[11.866193] (-) TimerEvent: {}
+[11.966772] (-) TimerEvent: {}
+[12.067303] (-) TimerEvent: {}
+[12.168634] (-) TimerEvent: {}
+[12.269526] (-) TimerEvent: {}
+[12.370109] (-) TimerEvent: {}
+[12.471865] (-) TimerEvent: {}
+[12.572349] (-) TimerEvent: {}
+[12.672933] (-) TimerEvent: {}
+[12.773439] (-) TimerEvent: {}
+[12.874067] (-) TimerEvent: {}
+[12.974877] (-) TimerEvent: {}
+[13.075782] (-) TimerEvent: {}
+[13.176489] (-) TimerEvent: {}
+[13.277009] (-) TimerEvent: {}
+[13.377529] (-) TimerEvent: {}
+[13.477913] (-) TimerEvent: {}
+[13.578166] (-) TimerEvent: {}
+[13.678428] (-) TimerEvent: {}
+[13.778762] (-) TimerEvent: {}
+[13.879256] (-) TimerEvent: {}
+[13.979514] (-) TimerEvent: {}
+[14.080313] (-) TimerEvent: {}
+[14.181185] (-) TimerEvent: {}
+[14.281506] (-) TimerEvent: {}
+[14.381818] (-) TimerEvent: {}
+[14.482142] (-) TimerEvent: {}
+[14.582473] (-) TimerEvent: {}
+[14.682959] (-) TimerEvent: {}
+[14.783337] (-) TimerEvent: {}
+[14.883582] (-) TimerEvent: {}
+[14.983852] (-) TimerEvent: {}
+[15.084124] (-) TimerEvent: {}
+[15.184455] (-) TimerEvent: {}
+[15.285127] (-) TimerEvent: {}
+[15.385950] (-) TimerEvent: {}
+[15.486555] (-) TimerEvent: {}
+[15.587144] (-) TimerEvent: {}
+[15.687975] (-) TimerEvent: {}
+[15.755576] (stereo_camera_cpp) StdoutLine: {'line': b'[100%] Linking CXX executable stereo_camera_ros2_node\n'}
+[15.788215] (-) TimerEvent: {}
+[15.889012] (-) TimerEvent: {}
+[15.989981] (-) TimerEvent: {}
+[16.090678] (-) TimerEvent: {}
+[16.191238] (-) TimerEvent: {}
+[16.291766] (-) TimerEvent: {}
+[16.392300] (-) TimerEvent: {}
+[16.493014] (-) TimerEvent: {}
+[16.593670] (-) TimerEvent: {}
+[16.694572] (-) TimerEvent: {}
+[16.795372] (-) TimerEvent: {}
+[16.895765] (-) TimerEvent: {}
+[16.996735] (-) TimerEvent: {}
+[17.030728] (stereo_camera_cpp) StdoutLine: {'line': b'[100%] Built target stereo_camera_ros2_node\n'}
+[17.071978] (stereo_camera_cpp) CommandEnded: {'returncode': 0}
+[17.077384] (stereo_camera_cpp) JobProgress: {'identifier': 'stereo_camera_cpp', 'progress': 'install'}
+[17.096759] (-) TimerEvent: {}
+[17.120334] (stereo_camera_cpp) Command: {'cmd': ['/usr/bin/cmake', '--install', '/userdata/stereo_demo/build/stereo_camera_cpp'], 'cwd': '/userdata/stereo_demo/build/stereo_camera_cpp', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('UMS_MOUNTPOINT', '/mnt/ums'), ('NODE_EXTRA_CA_CERTS', '/home/monster/.nvm/versions/node/v22.17.0/lib/node_modules/@anthropic-ai/claude-code/ca.pem'), ('USER', 'monster'), ('CLAUDE_CODE_ENTRYPOINT', 'cli'), ('DISABLE_TELEMETRY', '1'), ('XAUTHLOCALHOSTNAME', ''), ('GIT_EDITOR', 'true'), ('USER_ID', '4916'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/tmp/.mount_CursoriobhbK/usr/share/cursor/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('USB_FUNCS', 'adb'), ('LD_LIBRARY_PATH', '/userdata/try_again/SelfFollowingROS2/install/turn_on_dlrobot_robot/lib:/userdata/try_again/SelfFollowingROS2/install/serial/lib:/userdata/try_again/SelfFollowingROS2/install/rfid_reader/lib:/userdata/try_again/SelfFollowingROS2/install/dlrobot_robot_msg/lib:/userdata/try_again/SelfFollowingROS2/install/custom_msgs/lib:/userdata/try_again/SelfFollowingROS2/install/ackermann_msgs/lib:/userdata/ros2_astra_camera/install/astra_camera/lib:/userdata/ros2_astra_camera/install/astra_camera_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/tmp/.mount_CursoriobhbK/usr/lib/:/tmp/.mount_CursoriobhbK/usr/lib32/:/tmp/.mount_CursoriobhbK/usr/lib64/:/tmp/.mount_CursoriobhbK/lib/:/tmp/.mount_CursoriobhbK/lib/i386-linux-gnu/:/tmp/.mount_CursoriobhbK/lib/x86_64-linux-gnu/:/tmp/.mount_CursoriobhbK/lib/aarch64-linux-gnu/:/tmp/.mount_CursoriobhbK/lib32/:/tmp/.mount_CursoriobhbK/lib64/:'), ('HOME', '/home/monster'), ('CHROME_DESKTOP', 'cursor.desktop'), ('APPDIR', '/tmp/.mount_CursoriobhbK'), ('TERM_PROGRAM_VERSION', '1.2.4'), ('DESKTOP_SESSION', 'ubuntu'), ('NVM_BIN', '/home/monster/.nvm/versions/node/v22.17.0/bin'), ('NVM_INC', '/home/monster/.nvm/versions/node/v22.17.0/include/node'), ('PERLLIB', '/tmp/.mount_CursoriobhbK/usr/share/perl5/:/tmp/.mount_CursoriobhbK/usr/lib/perl5/:'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/tmp/.mount_CursoriobhbK/usr/share/cursor/resources/app/extensions/git/dist/askpass-main.js'), ('NODE_NO_WARNINGS', '1'), ('VSCODE_GIT_ASKPASS_NODE', '/tmp/.mount_CursoriobhbK/usr/share/cursor/cursor'), ('MANAGERPID', '1183'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '1594'), ('BUNDLED_DEBUGPY_PATH', '/home/monster/.cursor/extensions/ms-python.debugpy-2025.6.0-linux-arm64/bundled/libs/debugpy'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=fba7d08a13d8f97f8c0e3f7a6873890c'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '4066'), ('NVM_DIR', '/home/monster/.nvm'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/userdata/ros2_astra_camera/install:/userdata/STP23_ROS2_SDK/stp23_ros2_ws/install:/userdata/try_again/SelfFollowingROS2/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'fcitx'), ('LOGNAME', 'monster'), ('OWD', '/home/monster/Downloads'), ('JOURNAL_STREAM', '8:33410'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('CLAUDE_CODE_SSE_PORT', '49501'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'monster'), ('ANTHROPIC_BASE_URL', 'https://gaccode.com/claudecode'), ('TERM', 'xterm-256color'), ('OTEL_EXPORTER_OTLP_METRICS_TEMPORALITY_PREFERENCE', 'delta'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/monster/.local/bin:/home/monster/.local/bin:/home/monster/.nvm/versions/node/v22.17.0/bin:/home/monster/.local/bin:/opt/ros/humble/bin:/tmp/.mount_CursoriobhbK/usr/bin/:/tmp/.mount_CursoriobhbK/usr/sbin/:/tmp/.mount_CursoriobhbK/usr/games/:/tmp/.mount_CursoriobhbK/bin/:/tmp/.mount_CursoriobhbK/sbin/:/home/monster/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/monster/.cursor/extensions/ms-python.debugpy-2025.6.0-linux-arm64/bundled/scripts/noConfigScripts'), ('SESSION_MANAGER', 'local/EAI-BOX2000:@/tmp/.ICE-unix/1594,unix/EAI-BOX2000:/tmp/.ICE-unix/1594'), ('INVOCATION_ID', 'e99ed482836348688359c4dc8e132514'), ('APPIMAGE', '/home/monster/Downloads/Cursor-1.1.5-aarch64.AppImage'), ('COREPACK_ENABLE_AUTO_PIN', '0'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('ADBD_SHELL', '/bin/bash'), ('DISPLAY', ':0'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/monster/.cursor/extensions/ms-python.debugpy-2025.6.0-linux-arm64/.noConfigDebugAdapterEndpoints/endpoint-7a22d6f0a2509e84.txt'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('XMODIFIERS', '@im=fcitx'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-8c5cce201a.sock'), ('TERM_PROGRAM', 'vscode'), ('CURSOR_TRACE_ID', '41e7ee2abfe5428888603d82bcd6f82f'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('GSETTINGS_SCHEMA_DIR', '/tmp/.mount_CursoriobhbK/usr/share/glib-2.0/schemas/:'), ('UMS_SIZE', '256M'), ('AMENT_PREFIX_PATH', '/userdata/try_again/SelfFollowingROS2/install/following_robot:/userdata/try_again/SelfFollowingROS2/install/turn_on_dlrobot_robot:/userdata/try_again/SelfFollowingROS2/install/serial:/userdata/try_again/SelfFollowingROS2/install/rfid_reader:/userdata/try_again/SelfFollowingROS2/install/dlrobot_robot_python:/userdata/try_again/SelfFollowingROS2/install/dlrobot_robot_msg:/userdata/try_again/SelfFollowingROS2/install/custom_msgs:/userdata/try_again/SelfFollowingROS2/install/ackermann_msgs:/userdata/ros2_astra_camera/install/astra_depth_reader:/userdata/ros2_astra_camera/install/astra_camera:/userdata/ros2_astra_camera/install/astra_camera_msgs:/userdata/STP23_ROS2_SDK/stp23_ros2_ws/install/ldlidar:/opt/ros/humble'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/bin/bash'), ('ARGV0', '/home/monster/Downloads/Cursor-1.1.5-aarch64.AppImage'), ('QT_ACCESSIBILITY', '1'), ('UMS_RO', '0'), ('USER_EMAIL', '13921994762@163.com'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CLAUDECODE', '1'), ('UMS_FSTYPE', 'vfat'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('AUTH_TOKEN', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQ5MTYsImVtYWlsIjoiMTM5MjE5OTQ3NjJAMTYzLmNvbSIsImFjY2Vzc1Rva2VuIjoiYWIzOWE3NWRjZThmNTI0N2Y1ODhjMWQ5N2YyNjk3ZDMyZTI2NTI0N2Q0NjRkZGE2MDdhYTUxZjMyMmU0NGI5OCIsImlhdCI6MTc1MjM2NjI5MSwiZXhwIjoxNzU0OTU4MjkxfQ.DQxya2YBYkUim8KLrf-bQ0Ma8DqPkP-zRm64izWtges'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('QT_IM_MODULE', 'fcitx'), ('PWD', '/userdata/stereo_demo/build/stereo_camera_cpp'), ('ENABLE_IDE_INTEGRATION', 'true'), ('DISABLE_AUTOUPDATER', '1'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CLUTTER_IM_MODULE', 'xim'), ('NVM_CD_FLAGS', ''), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=fba7d08a13d8f97f8c0e3f7a6873890c'), ('XDG_DATA_DIRS', '/tmp/.mount_CursoriobhbK/usr/share/:/usr/local/share:/usr/share:/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/'), ('CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC', '1'), ('ADB_TCP_PORT', '5555'), ('PYTHONPATH', '/userdata/try_again/SelfFollowingROS2/install/following_robot/lib/python3.10/site-packages:/userdata/try_again/SelfFollowingROS2/install/turn_on_dlrobot_robot/local/lib/python3.10/dist-packages:/userdata/try_again/SelfFollowingROS2/install/rfid_reader/local/lib/python3.10/dist-packages:/userdata/try_again/SelfFollowingROS2/install/rfid_reader/lib/python3.10/site-packages:/userdata/try_again/SelfFollowingROS2/install/dlrobot_robot_python/lib/python3.10/site-packages:/userdata/try_again/SelfFollowingROS2/install/dlrobot_robot_msg/local/lib/python3.10/dist-packages:/userdata/try_again/SelfFollowingROS2/install/custom_msgs/local/lib/python3.10/dist-packages:/userdata/try_again/SelfFollowingROS2/install/ackermann_msgs/local/lib/python3.10/dist-packages:/userdata/ros2_astra_camera/install/astra_depth_reader/lib/python3.10/site-packages:/userdata/ros2_astra_camera/install/astra_camera_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('UMS_MOUNT', '0'), ('QT_PLUGIN_PATH', '/tmp/.mount_CursoriobhbK/usr/lib/qt4/plugins/:/tmp/.mount_CursoriobhbK/usr/lib/i386-linux-gnu/qt4/plugins/:/tmp/.mount_CursoriobhbK/usr/lib/x86_64-linux-gnu/qt4/plugins/:/tmp/.mount_CursoriobhbK/usr/lib/aarch64-linux-gnu/qt4/plugins/:/tmp/.mount_CursoriobhbK/usr/lib32/qt4/plugins/:/tmp/.mount_CursoriobhbK/usr/lib64/qt4/plugins/:/tmp/.mount_CursoriobhbK/usr/lib/qt5/plugins/:/tmp/.mount_CursoriobhbK/usr/lib/i386-linux-gnu/qt5/plugins/:/tmp/.mount_CursoriobhbK/usr/lib/x86_64-linux-gnu/qt5/plugins/:/tmp/.mount_CursoriobhbK/usr/lib/aarch64-linux-gnu/qt5/plugins/:/tmp/.mount_CursoriobhbK/usr/lib32/qt5/plugins/:/tmp/.mount_CursoriobhbK/usr/lib64/qt5/plugins/:'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/userdata/try_again/SelfFollowingROS2/install/turn_on_dlrobot_robot:/userdata/try_again/SelfFollowingROS2/install/serial:/userdata/try_again/SelfFollowingROS2/install/rfid_reader:/userdata/try_again/SelfFollowingROS2/install/dlrobot_robot_msg:/userdata/try_again/SelfFollowingROS2/install/custom_msgs:/userdata/try_again/SelfFollowingROS2/install/ackermann_msgs:/userdata/ros2_astra_camera/install/astra_camera:/userdata/ros2_astra_camera/install/astra_camera_msgs:/userdata/STP23_ROS2_SDK/stp23_ros2_ws/install/ldlidar:/userdata/try_again/SelfFollowingROS2/install/following_robot:/userdata/try_again/SelfFollowingROS2/install/dlrobot_robot_python:/userdata/ros2_astra_camera/install/astra_depth_reader:/opt/ros/humble'), ('UMS_FILE', '/userdata/ums_shared.img')]), 'shell': False}
+[17.148647] (stereo_camera_cpp) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[17.149363] (stereo_camera_cpp) StdoutLine: {'line': b'-- Installing: /userdata/stereo_demo/install/stereo_camera_cpp/lib/stereo_camera_cpp/libstereo_camera_cpp_lib.a\n'}
+[17.150920] (stereo_camera_cpp) StdoutLine: {'line': b'-- Installing: /userdata/stereo_demo/install/stereo_camera_cpp/lib/stereo_camera_cpp/stereo_camera_demo\n'}
+[17.152366] (stereo_camera_cpp) StdoutLine: {'line': b'-- Set runtime path of "/userdata/stereo_demo/install/stereo_camera_cpp/lib/stereo_camera_cpp/stereo_camera_demo" to ""\n'}
+[17.152730] (stereo_camera_cpp) StdoutLine: {'line': b'-- Installing: /userdata/stereo_demo/install/stereo_camera_cpp/lib/stereo_camera_cpp/stereo_camera_ros2_node\n'}
+[17.155747] (stereo_camera_cpp) StdoutLine: {'line': b'-- Set runtime path of "/userdata/stereo_demo/install/stereo_camera_cpp/lib/stereo_camera_cpp/stereo_camera_ros2_node" to ""\n'}
+[17.158135] (stereo_camera_cpp) StdoutLine: {'line': b'-- Installing: /userdata/stereo_demo/install/stereo_camera_cpp/include\n'}
+[17.159818] (stereo_camera_cpp) StdoutLine: {'line': b'-- Installing: /userdata/stereo_demo/install/stereo_camera_cpp/include/stereo_camera.h\n'}
+[17.161836] (stereo_camera_cpp) StdoutLine: {'line': b'-- Installing: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/launch\n'}
+[17.162203] (stereo_camera_cpp) StdoutLine: {'line': b'-- Installing: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/launch/stereo_camera.launch.py\n'}
+[17.162553] (stereo_camera_cpp) StdoutLine: {'line': b'-- Installing: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/config\n'}
+[17.162898] (stereo_camera_cpp) StdoutLine: {'line': b'-- Installing: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/config/stereo_camera_params.yaml\n'}
+[17.163381] (stereo_camera_cpp) StdoutLine: {'line': b'-- Installing: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/environment/library_path.sh\n'}
+[17.164411] (stereo_camera_cpp) StdoutLine: {'line': b'-- Installing: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/environment/library_path.dsv\n'}
+[17.165162] (stereo_camera_cpp) StdoutLine: {'line': b'-- Installing: /userdata/stereo_demo/install/stereo_camera_cpp/share/ament_index/resource_index/package_run_dependencies/stereo_camera_cpp\n'}
+[17.167615] (stereo_camera_cpp) StdoutLine: {'line': b'-- Installing: /userdata/stereo_demo/install/stereo_camera_cpp/share/ament_index/resource_index/parent_prefix_path/stereo_camera_cpp\n'}
+[17.168411] (stereo_camera_cpp) StdoutLine: {'line': b'-- Installing: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/environment/ament_prefix_path.sh\n'}
+[17.168778] (stereo_camera_cpp) StdoutLine: {'line': b'-- Installing: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/environment/ament_prefix_path.dsv\n'}
+[17.169259] (stereo_camera_cpp) StdoutLine: {'line': b'-- Installing: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/environment/path.sh\n'}
+[17.170177] (stereo_camera_cpp) StdoutLine: {'line': b'-- Installing: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/environment/path.dsv\n'}
+[17.171012] (stereo_camera_cpp) StdoutLine: {'line': b'-- Installing: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/local_setup.bash\n'}
+[17.171394] (stereo_camera_cpp) StdoutLine: {'line': b'-- Installing: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/local_setup.sh\n'}
+[17.171855] (stereo_camera_cpp) StdoutLine: {'line': b'-- Installing: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/local_setup.zsh\n'}
+[17.172723] (stereo_camera_cpp) StdoutLine: {'line': b'-- Installing: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/local_setup.dsv\n'}
+[17.173885] (stereo_camera_cpp) StdoutLine: {'line': b'-- Installing: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/package.dsv\n'}
+[17.174641] (stereo_camera_cpp) StdoutLine: {'line': b'-- Installing: /userdata/stereo_demo/install/stereo_camera_cpp/share/ament_index/resource_index/packages/stereo_camera_cpp\n'}
+[17.175718] (stereo_camera_cpp) StdoutLine: {'line': b'-- Installing: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[17.176277] (stereo_camera_cpp) StdoutLine: {'line': b'-- Installing: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[17.178728] (stereo_camera_cpp) StdoutLine: {'line': b'-- Installing: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[17.184255] (stereo_camera_cpp) StdoutLine: {'line': b'-- Installing: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/cmake/stereo_camera_cppConfig.cmake\n'}
+[17.185487] (stereo_camera_cpp) StdoutLine: {'line': b'-- Installing: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/cmake/stereo_camera_cppConfig-version.cmake\n'}
+[17.186761] (stereo_camera_cpp) StdoutLine: {'line': b'-- Installing: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/package.xml\n'}
+[17.187979] (stereo_camera_cpp) CommandEnded: {'returncode': 0}
+[17.197658] (-) TimerEvent: {}
+[17.255546] (stereo_camera_cpp) JobEnded: {'identifier': 'stereo_camera_cpp', 'rc': 0}
+[17.257237] (-) EventReactorShutdown: {}

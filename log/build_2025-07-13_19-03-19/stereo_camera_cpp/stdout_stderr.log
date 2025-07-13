@@ -1,0 +1,42 @@
+Consolidate compiler generated dependencies of target stereo_camera_cpp_lib
+[ 16%] Building CXX object CMakeFiles/stereo_camera_cpp_lib.dir/src/stereo_camera.cpp.o
+[ 33%] Linking CXX static library libstereo_camera_cpp_lib.a
+[ 33%] Built target stereo_camera_cpp_lib
+[ 50%] Building CXX object CMakeFiles/stereo_camera_demo.dir/src/main.cpp.o
+[ 66%] Building CXX object CMakeFiles/stereo_camera_ros2_node.dir/src/stereo_camera_ros2_node.cpp.o
+[ 83%] Linking CXX executable stereo_camera_demo
+[ 83%] Built target stereo_camera_demo
+[100%] Linking CXX executable stereo_camera_ros2_node
+[100%] Built target stereo_camera_ros2_node
+-- Install configuration: ""
+-- Installing: /userdata/stereo_demo/install/stereo_camera_cpp/lib/stereo_camera_cpp/libstereo_camera_cpp_lib.a
+-- Installing: /userdata/stereo_demo/install/stereo_camera_cpp/lib/stereo_camera_cpp/stereo_camera_demo
+-- Set runtime path of "/userdata/stereo_demo/install/stereo_camera_cpp/lib/stereo_camera_cpp/stereo_camera_demo" to ""
+-- Installing: /userdata/stereo_demo/install/stereo_camera_cpp/lib/stereo_camera_cpp/stereo_camera_ros2_node
+-- Set runtime path of "/userdata/stereo_demo/install/stereo_camera_cpp/lib/stereo_camera_cpp/stereo_camera_ros2_node" to ""
+-- Installing: /userdata/stereo_demo/install/stereo_camera_cpp/include
+-- Installing: /userdata/stereo_demo/install/stereo_camera_cpp/include/stereo_camera.h
+-- Installing: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/launch
+-- Installing: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/launch/stereo_camera.launch.py
+-- Installing: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/config
+-- Installing: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/config/stereo_camera_params.yaml
+-- Installing: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/environment/library_path.sh
+-- Installing: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/environment/library_path.dsv
+-- Installing: /userdata/stereo_demo/install/stereo_camera_cpp/share/ament_index/resource_index/package_run_dependencies/stereo_camera_cpp
+-- Installing: /userdata/stereo_demo/install/stereo_camera_cpp/share/ament_index/resource_index/parent_prefix_path/stereo_camera_cpp
+-- Installing: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/environment/ament_prefix_path.sh
+-- Installing: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/environment/ament_prefix_path.dsv
+-- Installing: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/environment/path.sh
+-- Installing: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/environment/path.dsv
+-- Installing: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/local_setup.bash
+-- Installing: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/local_setup.sh
+-- Installing: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/local_setup.zsh
+-- Installing: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/local_setup.dsv
+-- Installing: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/package.dsv
+-- Installing: /userdata/stereo_demo/install/stereo_camera_cpp/share/ament_index/resource_index/packages/stereo_camera_cpp
+-- Installing: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Installing: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/cmake/ament_cmake_export_libraries-extras.cmake
+-- Installing: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Installing: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/cmake/stereo_camera_cppConfig.cmake
+-- Installing: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/cmake/stereo_camera_cppConfig-version.cmake
+-- Installing: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/package.xml

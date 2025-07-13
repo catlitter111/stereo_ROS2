@@ -1,0 +1,132 @@
+[0.000000] (-) TimerEvent: {}
+[0.001056] (stereo_camera_cpp) JobQueued: {'identifier': 'stereo_camera_cpp', 'dependencies': OrderedDict()}
+[0.001194] (stereo_camera_cpp) JobStarted: {'identifier': 'stereo_camera_cpp'}
+[0.019666] (stereo_camera_cpp) JobProgress: {'identifier': 'stereo_camera_cpp', 'progress': 'cmake'}
+[0.021029] (stereo_camera_cpp) Command: {'cmd': ['/usr/bin/cmake', '/userdata/stereo_demo', '-DCMAKE_INSTALL_PREFIX=/userdata/stereo_demo/install/stereo_camera_cpp'], 'cwd': '/userdata/stereo_demo/build/stereo_camera_cpp', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('UMS_MOUNTPOINT', '/mnt/ums'), ('USER', 'monster'), ('XAUTHLOCALHOSTNAME', ''), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('USB_FUNCS', 'adb'), ('LD_LIBRARY_PATH', '/userdata/try_again/SelfFollowingROS2/install/turn_on_dlrobot_robot/lib:/userdata/try_again/SelfFollowingROS2/install/serial/lib:/userdata/try_again/SelfFollowingROS2/install/rfid_reader/lib:/userdata/try_again/SelfFollowingROS2/install/dlrobot_robot_msg/lib:/userdata/try_again/SelfFollowingROS2/install/custom_msgs/lib:/userdata/try_again/SelfFollowingROS2/install/ackermann_msgs/lib:/userdata/ros2_astra_camera/install/astra_camera/lib:/userdata/ros2_astra_camera/install/astra_camera_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/monster'), ('DESKTOP_SESSION', 'ubuntu'), ('NVM_BIN', '/home/monster/.nvm/versions/node/v22.17.0/bin'), ('NVM_INC', '/home/monster/.nvm/versions/node/v22.17.0/include/node'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '1594'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=fba7d08a13d8f97f8c0e3f7a6873890c'), ('COLORTERM', 'truecolor'), ('NVM_DIR', '/home/monster/.nvm'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/userdata/ros2_astra_camera/install:/userdata/STP23_ROS2_SDK/stp23_ros2_ws/install:/userdata/try_again/SelfFollowingROS2/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'fcitx'), ('LOGNAME', 'monster'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'monster'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/monster/.nvm/versions/node/v22.17.0/bin:/home/monster/.local/bin:/opt/ros/humble/bin:/home/monster/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/EAI-BOX2000:@/tmp/.ICE-unix/1594,unix/EAI-BOX2000:/tmp/.ICE-unix/1594'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/18cfb257_31c8_4dfd_823b_afce239aa8a4'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('ADBD_SHELL', '/bin/bash'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=fcitx'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.127'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('UMS_SIZE', '256M'), ('AMENT_PREFIX_PATH', '/userdata/try_again/SelfFollowingROS2/install/following_robot:/userdata/try_again/SelfFollowingROS2/install/turn_on_dlrobot_robot:/userdata/try_again/SelfFollowingROS2/install/serial:/userdata/try_again/SelfFollowingROS2/install/rfid_reader:/userdata/try_again/SelfFollowingROS2/install/dlrobot_robot_python:/userdata/try_again/SelfFollowingROS2/install/dlrobot_robot_msg:/userdata/try_again/SelfFollowingROS2/install/custom_msgs:/userdata/try_again/SelfFollowingROS2/install/ackermann_msgs:/userdata/ros2_astra_camera/install/astra_depth_reader:/userdata/ros2_astra_camera/install/astra_camera:/userdata/ros2_astra_camera/install/astra_camera_msgs:/userdata/STP23_ROS2_SDK/stp23_ros2_ws/install/ldlidar:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('UMS_RO', '0'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('UMS_FSTYPE', 'vfat'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'fcitx'), ('PWD', '/userdata/stereo_demo/build/stereo_camera_cpp'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CLUTTER_IM_MODULE', 'xim'), ('NVM_CD_FLAGS', ''), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=fba7d08a13d8f97f8c0e3f7a6873890c'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/'), ('ADB_TCP_PORT', '5555'), ('PYTHONPATH', '/userdata/try_again/SelfFollowingROS2/install/following_robot/lib/python3.10/site-packages:/userdata/try_again/SelfFollowingROS2/install/turn_on_dlrobot_robot/local/lib/python3.10/dist-packages:/userdata/try_again/SelfFollowingROS2/install/rfid_reader/local/lib/python3.10/dist-packages:/userdata/try_again/SelfFollowingROS2/install/rfid_reader/lib/python3.10/site-packages:/userdata/try_again/SelfFollowingROS2/install/dlrobot_robot_python/lib/python3.10/site-packages:/userdata/try_again/SelfFollowingROS2/install/dlrobot_robot_msg/local/lib/python3.10/dist-packages:/userdata/try_again/SelfFollowingROS2/install/custom_msgs/local/lib/python3.10/dist-packages:/userdata/try_again/SelfFollowingROS2/install/ackermann_msgs/local/lib/python3.10/dist-packages:/userdata/ros2_astra_camera/install/astra_depth_reader/lib/python3.10/site-packages:/userdata/ros2_astra_camera/install/astra_camera_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('UMS_MOUNT', '0'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/userdata/try_again/SelfFollowingROS2/install/turn_on_dlrobot_robot:/userdata/try_again/SelfFollowingROS2/install/serial:/userdata/try_again/SelfFollowingROS2/install/rfid_reader:/userdata/try_again/SelfFollowingROS2/install/dlrobot_robot_msg:/userdata/try_again/SelfFollowingROS2/install/custom_msgs:/userdata/try_again/SelfFollowingROS2/install/ackermann_msgs:/userdata/ros2_astra_camera/install/astra_camera:/userdata/ros2_astra_camera/install/astra_camera_msgs:/userdata/STP23_ROS2_SDK/stp23_ros2_ws/install/ldlidar:/userdata/try_again/SelfFollowingROS2/install/following_robot:/userdata/try_again/SelfFollowingROS2/install/dlrobot_robot_python:/userdata/ros2_astra_camera/install/astra_depth_reader:/opt/ros/humble'), ('UMS_FILE', '/userdata/ums_shared.img')]), 'shell': False}
+[0.098774] (-) TimerEvent: {}
+[0.199879] (-) TimerEvent: {}
+[0.300797] (-) TimerEvent: {}
+[0.372406] (stereo_camera_cpp) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.401014] (-) TimerEvent: {}
+[0.502177] (-) TimerEvent: {}
+[0.603705] (-) TimerEvent: {}
+[0.705312] (-) TimerEvent: {}
+[0.733700] (stereo_camera_cpp) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.789512] (stereo_camera_cpp) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.805567] (-) TimerEvent: {}
+[0.907015] (-) TimerEvent: {}
+[1.008505] (-) TimerEvent: {}
+[1.084297] (stereo_camera_cpp) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[1.108875] (-) TimerEvent: {}
+[1.128127] (stereo_camera_cpp) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[1.131693] (stereo_camera_cpp) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[1.133856] (stereo_camera_cpp) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[1.150330] (stereo_camera_cpp) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[1.209217] (-) TimerEvent: {}
+[1.310505] (-) TimerEvent: {}
+[1.404224] (stereo_camera_cpp) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[1.410570] (-) TimerEvent: {}
+[1.450073] (stereo_camera_cpp) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[1.451118] (stereo_camera_cpp) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[1.453042] (stereo_camera_cpp) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[1.470165] (stereo_camera_cpp) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[1.510918] (-) TimerEvent: {}
+[1.612000] (-) TimerEvent: {}
+[1.713118] (-) TimerEvent: {}
+[1.814570] (-) TimerEvent: {}
+[1.915851] (-) TimerEvent: {}
+[2.016554] (stereo_camera_cpp) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[2.017503] (-) TimerEvent: {}
+[2.118345] (-) TimerEvent: {}
+[2.219593] (-) TimerEvent: {}
+[2.321023] (-) TimerEvent: {}
+[2.390140] (stereo_camera_cpp) StdoutLine: {'line': b'-- Found rclcpp: 16.0.12 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[2.421353] (-) TimerEvent: {}
+[2.518368] (stereo_camera_cpp) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[2.521449] (-) TimerEvent: {}
+[2.528024] (stereo_camera_cpp) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[2.546449] (stereo_camera_cpp) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[2.576797] (stereo_camera_cpp) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[2.621986] (-) TimerEvent: {}
+[2.634749] (stereo_camera_cpp) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[2.722298] (-) TimerEvent: {}
+[2.786340] (stereo_camera_cpp) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[2.801260] (stereo_camera_cpp) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[2.822487] (-) TimerEvent: {}
+[2.923531] (-) TimerEvent: {}
+[3.024650] (-) TimerEvent: {}
+[3.119783] (stereo_camera_cpp) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[3.124720] (-) TimerEvent: {}
+[3.215045] (stereo_camera_cpp) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[3.224919] (-) TimerEvent: {}
+[3.312486] (stereo_camera_cpp) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[3.325140] (-) TimerEvent: {}
+[3.361975] (stereo_camera_cpp) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[3.425469] (-) TimerEvent: {}
+[3.526765] (-) TimerEvent: {}
+[3.628201] (-) TimerEvent: {}
+[3.631219] (stereo_camera_cpp) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[3.632350] (stereo_camera_cpp) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[3.728593] (-) TimerEvent: {}
+[3.830156] (-) TimerEvent: {}
+[3.909715] (stereo_camera_cpp) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[3.913817] (stereo_camera_cpp) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[3.930344] (-) TimerEvent: {}
+[4.031536] (-) TimerEvent: {}
+[4.115635] (stereo_camera_cpp) StdoutLine: {'line': b'-- Found sensor_msgs: 4.8.0 (/opt/ros/humble/share/sensor_msgs/cmake)\n'}
+[4.131709] (-) TimerEvent: {}
+[4.185302] (stereo_camera_cpp) StdoutLine: {'line': b'-- Found cv_bridge: 3.2.1 (/opt/ros/humble/share/cv_bridge/cmake)\n'}
+[4.209338] (stereo_camera_cpp) StdoutLine: {'line': b'-- Found image_transport: 3.1.12 (/opt/ros/humble/share/image_transport/cmake)\n'}
+[4.232013] (-) TimerEvent: {}
+[4.267200] (stereo_camera_cpp) StdoutLine: {'line': b'-- Found tf2: 0.25.13 (/opt/ros/humble/share/tf2/cmake)\n'}
+[4.276953] (stereo_camera_cpp) StdoutLine: {'line': b'-- Found tf2_ros: 0.25.13 (/opt/ros/humble/share/tf2_ros/cmake)\n'}
+[4.332129] (-) TimerEvent: {}
+[4.432699] (-) TimerEvent: {}
+[4.440801] (stereo_camera_cpp) StdoutLine: {'line': b'-- Found OpenCV: /usr (found suitable version "4.5.4", minimum required is "4") \n'}
+[4.441224] (stereo_camera_cpp) StdoutLine: {'line': b'-- Found OpenCV version: 4.5.4\n'}
+[4.457177] (stereo_camera_cpp) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.12 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[4.460883] (stereo_camera_cpp) StdoutLine: {'line': b'-- Found ament_cmake_gtest: 1.3.11 (/opt/ros/humble/share/ament_cmake_gtest/cmake)\n'}
+[4.532939] (-) TimerEvent: {}
+[4.634053] (-) TimerEvent: {}
+[4.723035] (stereo_camera_cpp) StdoutLine: {'line': b"-- Found gtest sources under '/opt/ros/humble/src/gtest_vendor': C++ tests using 'Google Test' will be built\n"}
+[4.734415] (-) TimerEvent: {}
+[4.749476] (stereo_camera_cpp) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[4.757363] (stereo_camera_cpp) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[4.758311] (stereo_camera_cpp) StdoutLine: {'line': b'-- Configured cppcheck include dirs: /userdata/stereo_demo/include\n'}
+[4.758837] (stereo_camera_cpp) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[4.765483] (stereo_camera_cpp) StdoutLine: {'line': b"-- Added test 'cpplint' to check C / C++ code against the Google style\n"}
+[4.766070] (stereo_camera_cpp) StdoutLine: {'line': b'-- Configured cpplint exclude dirs and/or files: \n'}
+[4.767773] (stereo_camera_cpp) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[4.770779] (stereo_camera_cpp) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[4.772921] (stereo_camera_cpp) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257\n"}
+[4.780223] (stereo_camera_cpp) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[4.781208] (stereo_camera_cpp) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[4.783523] (stereo_camera_cpp) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[4.793308] (stereo_camera_cpp) StdoutLine: {'line': b'-- Configuring done\n'}
+[4.806589] (stereo_camera_cpp) StderrLine: {'line': b'\x1b[31mCMake Error at /opt/ros/humble/share/ament_cmake_gtest/cmake/ament_add_gtest_executable.cmake:50 (add_executable):\n'}
+[4.807343] (stereo_camera_cpp) StderrLine: {'line': b'  Cannot find source file:\n'}
+[4.807667] (stereo_camera_cpp) StderrLine: {'line': b'\n'}
+[4.807975] (stereo_camera_cpp) StderrLine: {'line': b'    test/test_stereo_camera.cpp\n'}
+[4.808284] (stereo_camera_cpp) StderrLine: {'line': b'\n'}
+[4.808590] (stereo_camera_cpp) StderrLine: {'line': b'  Tried extensions .c .C .c++ .cc .cpp .cxx .cu .mpp .m .M .mm .ixx .cppm .h\n'}
+[4.808923] (stereo_camera_cpp) StderrLine: {'line': b'  .hh .h++ .hm .hpp .hxx .in .txx .f .F .for .f77 .f90 .f95 .f03 .hip .ispc\n'}
+[4.809231] (stereo_camera_cpp) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[4.809538] (stereo_camera_cpp) StderrLine: {'line': b'  /opt/ros/humble/share/ament_cmake_gtest/cmake/ament_add_gtest_executable.cmake:37 (_ament_add_gtest_executable)\n'}
+[4.809881] (stereo_camera_cpp) StderrLine: {'line': b'  /opt/ros/humble/share/ament_cmake_gtest/cmake/ament_add_gtest.cmake:68 (ament_add_gtest_executable)\n'}
+[4.810199] (stereo_camera_cpp) StderrLine: {'line': b'  CMakeLists.txt:129 (ament_add_gtest)\n'}
+[4.810506] (stereo_camera_cpp) StderrLine: {'line': b'\n'}
+[4.810811] (stereo_camera_cpp) StderrLine: {'line': b'\x1b[0m\n'}
+[4.811369] (stereo_camera_cpp) StderrLine: {'line': b'\x1b[31mCMake Error at /opt/ros/humble/share/ament_cmake_gtest/cmake/ament_add_gtest_executable.cmake:50 (add_executable):\n'}
+[4.811690] (stereo_camera_cpp) StderrLine: {'line': b'  No SOURCES given to target: stereo_camera_cpp_test\n'}
+[4.811999] (stereo_camera_cpp) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[4.812309] (stereo_camera_cpp) StderrLine: {'line': b'  /opt/ros/humble/share/ament_cmake_gtest/cmake/ament_add_gtest_executable.cmake:37 (_ament_add_gtest_executable)\n'}
+[4.812682] (stereo_camera_cpp) StderrLine: {'line': b'  /opt/ros/humble/share/ament_cmake_gtest/cmake/ament_add_gtest.cmake:68 (ament_add_gtest_executable)\n'}
+[4.812994] (stereo_camera_cpp) StderrLine: {'line': b'  CMakeLists.txt:129 (ament_add_gtest)\n'}
+[4.813340] (stereo_camera_cpp) StderrLine: {'line': b'\n'}
+[4.813651] (stereo_camera_cpp) StderrLine: {'line': b'\x1b[0m\n'}
+[4.813958] (stereo_camera_cpp) StderrLine: {'line': b'\x1b[0mCMake Generate step failed.  Build files cannot be regenerated correctly.\x1b[0m\n'}
+[4.834604] (-) TimerEvent: {}
+[4.846266] (stereo_camera_cpp) CommandEnded: {'returncode': 1}
+[4.935237] (-) TimerEvent: {}
+[4.950906] (stereo_camera_cpp) JobEnded: {'identifier': 'stereo_camera_cpp', 'rc': 1}
+[4.963575] (-) EventReactorShutdown: {}

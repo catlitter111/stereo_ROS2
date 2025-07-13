@@ -1,0 +1,27 @@
+/userdata/stereo_demo/src/stereo_camera_ros2_node.cpp: In member function ‘void StereoCameraNode::delayed_init()’:
+/userdata/stereo_demo/src/stereo_camera_ros2_node.cpp:72:44: error: reference to ‘shared_from_this’ is ambiguous
+   72 |         image_transport::ImageTransport it(shared_from_this());
+      |                                            ^~~~~~~~~~~~~~~~
+In file included from /usr/include/c++/11/memory:77,
+                 from /usr/include/opencv4/opencv2/core/cvstd_wrapper.hpp:11,
+                 from /usr/include/opencv4/opencv2/core/cvstd.hpp:81,
+                 from /usr/include/opencv4/opencv2/core/base.hpp:58,
+                 from /usr/include/opencv4/opencv2/core.hpp:53,
+                 from /usr/include/opencv4/opencv2/opencv.hpp:52,
+                 from /userdata/stereo_demo/include/stereo_camera.h:3,
+                 from /userdata/stereo_demo/src/stereo_camera_ros2_node.cpp:1:
+/usr/include/c++/11/bits/shared_ptr.h:811:7: note: candidates are: ‘std::shared_ptr<const _Tp> std::enable_shared_from_this<_Tp>::shared_from_this() const [with _Tp = StereoCameraNode]’
+  811 |       shared_from_this() const
+      |       ^~~~~~~~~~~~~~~~
+/usr/include/c++/11/bits/shared_ptr.h:807:7: note:                 ‘std::shared_ptr<_Tp> std::enable_shared_from_this<_Tp>::shared_from_this() [with _Tp = StereoCameraNode]’
+  807 |       shared_from_this()
+      |       ^~~~~~~~~~~~~~~~
+/usr/include/c++/11/bits/shared_ptr.h:811:7: note:                 ‘std::shared_ptr<const _Tp> std::enable_shared_from_this<_Tp>::shared_from_this() const [with _Tp = rclcpp::Node]’
+  811 |       shared_from_this() const
+      |       ^~~~~~~~~~~~~~~~
+/usr/include/c++/11/bits/shared_ptr.h:807:7: note:                 ‘std::shared_ptr<_Tp> std::enable_shared_from_this<_Tp>::shared_from_this() [with _Tp = rclcpp::Node]’
+  807 |       shared_from_this()
+      |       ^~~~~~~~~~~~~~~~
+gmake[2]: *** [CMakeFiles/stereo_camera_ros2_node.dir/build.make:76: CMakeFiles/stereo_camera_ros2_node.dir/src/stereo_camera_ros2_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:193: CMakeFiles/stereo_camera_ros2_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

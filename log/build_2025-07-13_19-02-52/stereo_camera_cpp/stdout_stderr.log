@@ -1,0 +1,75 @@
+-- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found rclcpp: 16.0.12 (/opt/ros/humble/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Found sensor_msgs: 4.8.0 (/opt/ros/humble/share/sensor_msgs/cmake)
+-- Found cv_bridge: 3.2.1 (/opt/ros/humble/share/cv_bridge/cmake)
+-- Found image_transport: 3.1.12 (/opt/ros/humble/share/image_transport/cmake)
+-- Found tf2: 0.25.13 (/opt/ros/humble/share/tf2/cmake)
+-- Found tf2_ros: 0.25.13 (/opt/ros/humble/share/tf2_ros/cmake)
+-- Found OpenCV version: 4.5.4
+-- Found ament_lint_auto: 0.12.12 (/opt/ros/humble/share/ament_lint_auto/cmake)
+-- Added test 'copyright' to check source files copyright and LICENSE
+-- Added test 'cppcheck' to perform static code analysis on C / C++ code
+-- Configured cppcheck include dirs: /userdata/stereo_demo/include
+-- Configured cppcheck exclude dirs and/or files: 
+-- Added test 'cpplint' to check C / C++ code against the Google style
+-- Configured cpplint exclude dirs and/or files: 
+-- Added test 'flake8' to check Python code syntax and style conventions
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+-- Added test 'uncrustify' to check C / C++ code style
+-- Configured uncrustify additional arguments: 
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /userdata/stereo_demo/build/stereo_camera_cpp
+[ 16%] Building CXX object CMakeFiles/stereo_camera_cpp_lib.dir/src/stereo_camera.cpp.o
+/userdata/stereo_demo/src/stereo_camera.cpp: In member function ‘bool stereo_vision::StereoCamera::initialize_stereo_matcher()’:
+/userdata/stereo_demo/src/stereo_camera.cpp:187:48: error: no match for ‘operator=’ (operand types are ‘std::unique_ptr<cv::StereoBM>’ and ‘cv::Ptr<cv::StereoBM>’)
+  187 |         stereo_matcher_ = cv::StereoBM::create();
+      |                                                ^
+In file included from /usr/include/c++/11/memory:76,
+                 from /usr/include/opencv4/opencv2/core/cvstd_wrapper.hpp:11,
+                 from /usr/include/opencv4/opencv2/core/cvstd.hpp:81,
+                 from /usr/include/opencv4/opencv2/core/base.hpp:58,
+                 from /usr/include/opencv4/opencv2/core.hpp:53,
+                 from /usr/include/opencv4/opencv2/opencv.hpp:52,
+                 from /userdata/stereo_demo/include/stereo_camera.h:3,
+                 from /userdata/stereo_demo/src/stereo_camera.cpp:1:
+/usr/include/c++/11/bits/unique_ptr.h:386:9: note: candidate: ‘template<class _Up, class _Ep> typename std::enable_if<std::__and_<std::__and_<std::is_convertible<typename std::unique_ptr<_Up, _Ep>::pointer, typename std::__uniq_ptr_impl<_Tp, _Dp>::pointer>, std::__not_<std::is_array<_Up> > >, std::is_assignable<_T2&, _U2&&> >::value, std::unique_ptr<_Tp, _Dp>&>::type std::unique_ptr<_Tp, _Dp>::operator=(std::unique_ptr<_Up, _Ep>&&) [with _Up = _Up; _Ep = _Ep; _Tp = cv::StereoBM; _Dp = std::default_delete<cv::StereoBM>]’
+  386 |         operator=(unique_ptr<_Up, _Ep>&& __u) noexcept
+      |         ^~~~~~~~
+/usr/include/c++/11/bits/unique_ptr.h:386:9: note:   template argument deduction/substitution failed:
+/userdata/stereo_demo/src/stereo_camera.cpp:187:48: note:   ‘cv::Ptr<cv::StereoBM>’ is not derived from ‘std::unique_ptr<_Tp, _Dp>’
+  187 |         stereo_matcher_ = cv::StereoBM::create();
+      |                                                ^
+In file included from /usr/include/c++/11/memory:76,
+                 from /usr/include/opencv4/opencv2/core/cvstd_wrapper.hpp:11,
+                 from /usr/include/opencv4/opencv2/core/cvstd.hpp:81,
+                 from /usr/include/opencv4/opencv2/core/base.hpp:58,
+                 from /usr/include/opencv4/opencv2/core.hpp:53,
+                 from /usr/include/opencv4/opencv2/opencv.hpp:52,
+                 from /userdata/stereo_demo/include/stereo_camera.h:3,
+                 from /userdata/stereo_demo/src/stereo_camera.cpp:1:
+/usr/include/c++/11/bits/unique_ptr.h:371:19: note: candidate: ‘std::unique_ptr<_Tp, _Dp>& std::unique_ptr<_Tp, _Dp>::operator=(std::unique_ptr<_Tp, _Dp>&&) [with _Tp = cv::StereoBM; _Dp = std::default_delete<cv::StereoBM>]’
+  371 |       unique_ptr& operator=(unique_ptr&&) = default;
+      |                   ^~~~~~~~
+/usr/include/c++/11/bits/unique_ptr.h:371:29: note:   no known conversion for argument 1 from ‘cv::Ptr<cv::StereoBM>’ to ‘std::unique_ptr<cv::StereoBM>&&’
+  371 |       unique_ptr& operator=(unique_ptr&&) = default;
+      |                             ^~~~~~~~~~~~
+/usr/include/c++/11/bits/unique_ptr.h:395:7: note: candidate: ‘std::unique_ptr<_Tp, _Dp>& std::unique_ptr<_Tp, _Dp>::operator=(std::nullptr_t) [with _Tp = cv::StereoBM; _Dp = std::default_delete<cv::StereoBM>; std::nullptr_t = std::nullptr_t]’
+  395 |       operator=(nullptr_t) noexcept
+      |       ^~~~~~~~
+/usr/include/c++/11/bits/unique_ptr.h:395:17: note:   no known conversion for argument 1 from ‘cv::Ptr<cv::StereoBM>’ to ‘std::nullptr_t’
+  395 |       operator=(nullptr_t) noexcept
+      |                 ^~~~~~~~~
+gmake[2]: *** [CMakeFiles/stereo_camera_cpp_lib.dir/build.make:76: CMakeFiles/stereo_camera_cpp_lib.dir/src/stereo_camera.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:141: CMakeFiles/stereo_camera_cpp_lib.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

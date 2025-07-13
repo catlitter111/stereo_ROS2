@@ -1,0 +1,33 @@
+[0.018s] Invoking command in '/userdata/stereo_demo/build/stereo_camera_cpp': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/userdata/try_again/SelfFollowingROS2/install/following_robot:/userdata/try_again/SelfFollowingROS2/install/dlrobot_robot_python:/userdata/ros2_astra_camera/install/astra_depth_reader:/opt/ros/humble /usr/bin/cmake --build /userdata/stereo_demo/build/stereo_camera_cpp -- -j8 -l8
+[0.206s] [ 33%] Built target stereo_camera_cpp_lib
+[0.255s] Consolidate compiler generated dependencies of target stereo_camera_ros2_node
+[0.280s] [ 66%] Built target stereo_camera_demo
+[0.295s] [ 83%] Building CXX object CMakeFiles/stereo_camera_ros2_node.dir/src/stereo_camera_ros2_node.cpp.o
+[6.811s] /userdata/stereo_demo/src/stereo_camera_ros2_node.cpp: In member function ‘void StereoCameraNode::delayed_init()’:
+[6.811s] /userdata/stereo_demo/src/stereo_camera_ros2_node.cpp:72:44: error: reference to ‘shared_from_this’ is ambiguous
+[6.812s]    72 |         image_transport::ImageTransport it(shared_from_this());
+[6.812s]       |                                            ^~~~~~~~~~~~~~~~
+[6.812s] In file included from /usr/include/c++/11/memory:77,
+[6.813s]                  from /usr/include/opencv4/opencv2/core/cvstd_wrapper.hpp:11,
+[6.813s]                  from /usr/include/opencv4/opencv2/core/cvstd.hpp:81,
+[6.813s]                  from /usr/include/opencv4/opencv2/core/base.hpp:58,
+[6.813s]                  from /usr/include/opencv4/opencv2/core.hpp:53,
+[6.814s]                  from /usr/include/opencv4/opencv2/opencv.hpp:52,
+[6.814s]                  from /userdata/stereo_demo/include/stereo_camera.h:3,
+[6.814s]                  from /userdata/stereo_demo/src/stereo_camera_ros2_node.cpp:1:
+[6.815s] /usr/include/c++/11/bits/shared_ptr.h:811:7: note: candidates are: ‘std::shared_ptr<const _Tp> std::enable_shared_from_this<_Tp>::shared_from_this() const [with _Tp = StereoCameraNode]’
+[6.815s]   811 |       shared_from_this() const
+[6.815s]       |       ^~~~~~~~~~~~~~~~
+[6.816s] /usr/include/c++/11/bits/shared_ptr.h:807:7: note:                 ‘std::shared_ptr<_Tp> std::enable_shared_from_this<_Tp>::shared_from_this() [with _Tp = StereoCameraNode]’
+[6.816s]   807 |       shared_from_this()
+[6.816s]       |       ^~~~~~~~~~~~~~~~
+[6.817s] /usr/include/c++/11/bits/shared_ptr.h:811:7: note:                 ‘std::shared_ptr<const _Tp> std::enable_shared_from_this<_Tp>::shared_from_this() const [with _Tp = rclcpp::Node]’
+[6.817s]   811 |       shared_from_this() const
+[6.817s]       |       ^~~~~~~~~~~~~~~~
+[6.818s] /usr/include/c++/11/bits/shared_ptr.h:807:7: note:                 ‘std::shared_ptr<_Tp> std::enable_shared_from_this<_Tp>::shared_from_this() [with _Tp = rclcpp::Node]’
+[6.818s]   807 |       shared_from_this()
+[6.818s]       |       ^~~~~~~~~~~~~~~~
+[9.160s] gmake[2]: *** [CMakeFiles/stereo_camera_ros2_node.dir/build.make:76: CMakeFiles/stereo_camera_ros2_node.dir/src/stereo_camera_ros2_node.cpp.o] Error 1
+[9.161s] gmake[1]: *** [CMakeFiles/Makefile2:193: CMakeFiles/stereo_camera_ros2_node.dir/all] Error 2
+[9.162s] gmake: *** [Makefile:146: all] Error 2
+[9.172s] Invoked command in '/userdata/stereo_demo/build/stereo_camera_cpp' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/userdata/try_again/SelfFollowingROS2/install/following_robot:/userdata/try_again/SelfFollowingROS2/install/dlrobot_robot_python:/userdata/ros2_astra_camera/install/astra_depth_reader:/opt/ros/humble /usr/bin/cmake --build /userdata/stereo_demo/build/stereo_camera_cpp -- -j8 -l8

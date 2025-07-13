@@ -1,0 +1,14 @@
+/userdata/stereo_demo/src/stereo_camera_ros2_node.cpp: In constructor ‘StereoCameraNode::StereoCameraNode()’:
+/userdata/stereo_demo/src/stereo_camera_ros2_node.cpp:42:48: error: no matching function for call to ‘image_transport::ImageTransport::ImageTransport(StereoCameraNode*)’
+   42 |         image_transport::ImageTransport it(this);
+      |                                                ^
+In file included from /userdata/stereo_demo/src/stereo_camera_ros2_node.cpp:7:
+/opt/ros/humble/include/image_transport/image_transport/image_transport.hpp:111:12: note: candidate: ‘image_transport::ImageTransport::ImageTransport(rclcpp::Node::SharedPtr)’
+  111 |   explicit ImageTransport(rclcpp::Node::SharedPtr node);
+      |            ^~~~~~~~~~~~~~
+/opt/ros/humble/include/image_transport/image_transport/image_transport.hpp:111:51: note:   no known conversion for argument 1 from ‘StereoCameraNode*’ to ‘rclcpp::Node::SharedPtr’ {aka ‘std::shared_ptr<rclcpp::Node>’}
+  111 |   explicit ImageTransport(rclcpp::Node::SharedPtr node);
+      |                           ~~~~~~~~~~~~~~~~~~~~~~~~^~~~
+gmake[2]: *** [CMakeFiles/stereo_camera_ros2_node.dir/build.make:76: CMakeFiles/stereo_camera_ros2_node.dir/src/stereo_camera_ros2_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:193: CMakeFiles/stereo_camera_ros2_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

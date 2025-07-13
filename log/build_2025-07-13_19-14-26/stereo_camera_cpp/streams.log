@@ -1,0 +1,45 @@
+[0.025s] Invoking command in '/userdata/stereo_demo/build/stereo_camera_cpp': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/userdata/try_again/SelfFollowingROS2/install/following_robot:/userdata/try_again/SelfFollowingROS2/install/dlrobot_robot_python:/userdata/ros2_astra_camera/install/astra_depth_reader:/opt/ros/humble /usr/bin/cmake --build /userdata/stereo_demo/build/stereo_camera_cpp -- -j8 -l8
+[0.243s] [ 16%] Building CXX object CMakeFiles/stereo_camera_cpp_lib.dir/src/stereo_camera.cpp.o
+[4.171s] [ 33%] Linking CXX static library libstereo_camera_cpp_lib.a
+[4.277s] [ 33%] Built target stereo_camera_cpp_lib
+[4.353s] [ 50%] Building CXX object CMakeFiles/stereo_camera_demo.dir/src/main.cpp.o
+[4.376s] [ 66%] Building CXX object CMakeFiles/stereo_camera_ros2_node.dir/src/stereo_camera_ros2_node.cpp.o
+[7.970s] [ 83%] Linking CXX executable stereo_camera_demo
+[8.850s] [ 83%] Built target stereo_camera_demo
+[15.560s] [100%] Linking CXX executable stereo_camera_ros2_node
+[16.769s] [100%] Built target stereo_camera_ros2_node
+[16.807s] Invoked command in '/userdata/stereo_demo/build/stereo_camera_cpp' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/userdata/try_again/SelfFollowingROS2/install/following_robot:/userdata/try_again/SelfFollowingROS2/install/dlrobot_robot_python:/userdata/ros2_astra_camera/install/astra_depth_reader:/opt/ros/humble /usr/bin/cmake --build /userdata/stereo_demo/build/stereo_camera_cpp -- -j8 -l8
+[16.854s] Invoking command in '/userdata/stereo_demo/build/stereo_camera_cpp': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/userdata/try_again/SelfFollowingROS2/install/following_robot:/userdata/try_again/SelfFollowingROS2/install/dlrobot_robot_python:/userdata/ros2_astra_camera/install/astra_depth_reader:/opt/ros/humble /usr/bin/cmake --install /userdata/stereo_demo/build/stereo_camera_cpp
+[16.868s] -- Install configuration: ""
+[16.868s] -- Installing: /userdata/stereo_demo/install/stereo_camera_cpp/lib/stereo_camera_cpp/libstereo_camera_cpp_lib.a
+[16.869s] -- Installing: /userdata/stereo_demo/install/stereo_camera_cpp/lib/stereo_camera_cpp/stereo_camera_demo
+[16.870s] -- Set runtime path of "/userdata/stereo_demo/install/stereo_camera_cpp/lib/stereo_camera_cpp/stereo_camera_demo" to ""
+[16.870s] -- Installing: /userdata/stereo_demo/install/stereo_camera_cpp/lib/stereo_camera_cpp/stereo_camera_ros2_node
+[16.875s] -- Set runtime path of "/userdata/stereo_demo/install/stereo_camera_cpp/lib/stereo_camera_cpp/stereo_camera_ros2_node" to ""
+[16.875s] -- Up-to-date: /userdata/stereo_demo/install/stereo_camera_cpp/include
+[16.875s] -- Installing: /userdata/stereo_demo/install/stereo_camera_cpp/include/stereo_camera.h
+[16.875s] -- Up-to-date: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/launch
+[16.875s] -- Up-to-date: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/launch/stereo_camera.launch.py
+[16.875s] -- Up-to-date: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/config
+[16.875s] -- Up-to-date: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/config/stereo_camera_params.yaml
+[16.876s] -- Up-to-date: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/environment/library_path.sh
+[16.876s] -- Up-to-date: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/environment/library_path.dsv
+[16.876s] -- Up-to-date: /userdata/stereo_demo/install/stereo_camera_cpp/share/ament_index/resource_index/package_run_dependencies/stereo_camera_cpp
+[16.876s] -- Up-to-date: /userdata/stereo_demo/install/stereo_camera_cpp/share/ament_index/resource_index/parent_prefix_path/stereo_camera_cpp
+[16.876s] -- Up-to-date: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/environment/ament_prefix_path.sh
+[16.876s] -- Up-to-date: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/environment/ament_prefix_path.dsv
+[16.876s] -- Up-to-date: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/environment/path.sh
+[16.876s] -- Up-to-date: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/environment/path.dsv
+[16.879s] -- Up-to-date: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/local_setup.bash
+[16.879s] -- Up-to-date: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/local_setup.sh
+[16.881s] -- Up-to-date: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/local_setup.zsh
+[16.883s] -- Up-to-date: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/local_setup.dsv
+[16.885s] -- Installing: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/package.dsv
+[16.886s] -- Up-to-date: /userdata/stereo_demo/install/stereo_camera_cpp/share/ament_index/resource_index/packages/stereo_camera_cpp
+[16.887s] -- Up-to-date: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/cmake/ament_cmake_export_include_directories-extras.cmake
+[16.888s] -- Up-to-date: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/cmake/ament_cmake_export_libraries-extras.cmake
+[16.889s] -- Up-to-date: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/cmake/ament_cmake_export_dependencies-extras.cmake
+[16.891s] -- Up-to-date: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/cmake/stereo_camera_cppConfig.cmake
+[16.892s] -- Up-to-date: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/cmake/stereo_camera_cppConfig-version.cmake
+[16.894s] -- Up-to-date: /userdata/stereo_demo/install/stereo_camera_cpp/share/stereo_camera_cpp/package.xml
+[16.895s] Invoked command in '/userdata/stereo_demo/build/stereo_camera_cpp' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/userdata/try_again/SelfFollowingROS2/install/following_robot:/userdata/try_again/SelfFollowingROS2/install/dlrobot_robot_python:/userdata/ros2_astra_camera/install/astra_depth_reader:/opt/ros/humble /usr/bin/cmake --install /userdata/stereo_demo/build/stereo_camera_cpp
