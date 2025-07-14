@@ -26,6 +26,7 @@ _colcon_prefix_chain_powershell_source_script "/opt/ros/humble\local_setup.ps1"
 _colcon_prefix_chain_powershell_source_script "/userdata/try_again/SelfFollowingROS2/install\local_setup.ps1"
 _colcon_prefix_chain_powershell_source_script "/userdata/STP23_ROS2_SDK/stp23_ros2_ws/install\local_setup.ps1"
 _colcon_prefix_chain_powershell_source_script "/userdata/ros2_astra_camera/install\local_setup.ps1"
+_colcon_prefix_chain_powershell_source_script "/userdata/rknn_yolo11_ros2/install\local_setup.ps1"
 
 # source this prefix
 $env:COLCON_CURRENT_PREFIX=(Split-Path $PSCommandPath -Parent)

@@ -35,10 +35,12 @@ def generate_launch_description():
             'camera_frame_id': 'stereo_camera',
         }],
         remappings=[
+            # 修正话题映射，让双目相机发布到期望的话题名称
             ('/stereo/left/image_raw', '/stereo_camera/left/image_raw'),
             ('/stereo/right/image_raw', '/stereo_camera/right/image_raw'),
             ('/stereo/disparity', '/stereo_camera/disparity'),
             ('/stereo/center_distance', '/stereo_camera/center_distance'),
+            # 修正服务映射
             ('/stereo/get_distance', '/stereo_camera/stereo/get_distance'),
         ]
     )
@@ -65,6 +67,7 @@ def generate_launch_description():
         # 信息输出
         LogInfo(msg=['启动双目相机系统，相机ID: ', LaunchConfiguration('camera_id')]),
         LogInfo(msg=['显示窗口将显示左目图像、FPS和距离信息']),
+        LogInfo(msg=['话题映射: /stereo/* -> /stereo_camera/*']),
         
         # 节点
         stereo_camera_node,
