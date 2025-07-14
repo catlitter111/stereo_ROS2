@@ -18,6 +18,8 @@ find_package(cv_bridge REQUIRED)
 find_package(image_transport REQUIRED)
 find_package(tf2 REQUIRED)
 find_package(tf2_ros REQUIRED)
+find_package(rosidl_default_generators REQUIRED)
+find_package(builtin_interfaces REQUIRED)
 
 # 查找OpenCV (ROS2 Humble使用OpenCV 4.5+)
 find_package(OpenCV 4 REQUIRED)
@@ -29,14 +31,20 @@ endif()
 
 message(STATUS "Found OpenCV version: ${OpenCV_VERSION}")
 
+# 生成服务接口
+rosidl_generate_interfaces(${PROJECT_NAME}
+  "srv/GetDistance.srv"
+  DEPENDENCIES builtin_interfaces geometry_msgs
+)
+
 # 包含目录
 include_directories(
   include
   ${OpenCV_INCLUDE_DIRS}
 )
 
-# 创建库
-add_library(${PROJECT_NAME}_lib
+# 创建共享库
+add_library(${PROJECT_NAME}_lib SHARED
   src/stereo_camera.cpp
 )
 
@@ -95,11 +103,34 @@ ament_target_dependencies(stereo_camera_ros2_node
   tf2_ros
 )
 
-# 安装目标
+# 显示节点可执行文件
+add_executable(stereo_display_node
+  src/stereo_display_node.cpp
+)
+
+target_link_libraries(stereo_display_node
+  ${OpenCV_LIBRARIES}
+)
+
+ament_target_dependencies(stereo_display_node
+  rclcpp
+  sensor_msgs
+  geometry_msgs
+  cv_bridge
+)
+
+# 安装库到标准lib目录
+install(TARGETS ${PROJECT_NAME}_lib
+  LIBRARY DESTINATION lib
+  ARCHIVE DESTINATION lib
+  RUNTIME DESTINATION bin
+)
+
+# 安装可执行文件到package-specific目录
 install(TARGETS
-  ${PROJECT_NAME}_lib
   stereo_camera_demo
   stereo_camera_ros2_node
+  stereo_display_node
   DESTINATION lib/${PROJECT_NAME}
 )
 
@@ -137,6 +168,14 @@ ament_export_dependencies(
   tf2
   tf2_ros
   OpenCV
+  builtin_interfaces
 )
+
+# 确保服务接口在目标构建之前生成
+rosidl_get_typesupport_target(cpp_typesupport_target ${PROJECT_NAME} "rosidl_typesupport_cpp")
+
+# 为所有可执行文件添加服务依赖
+target_link_libraries(stereo_camera_ros2_node "${cpp_typesupport_target}")
+target_link_libraries(stereo_display_node "${cpp_typesupport_target}")
 
 ament_package()

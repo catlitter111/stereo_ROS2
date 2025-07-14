@@ -33,15 +33,16 @@ struct StereoCalibration {
 };
 
 struct StereoMatcherParams {
-    int num_disparities = 96;
-    int block_size = 15;
-    int min_disparity = 18;
+    // 优化的参数以提高帧率
+    int num_disparities = 64;      // 减少视差数量 (96->64)
+    int block_size = 9;            // 减少块大小 (15->9)
+    int min_disparity = 0;         // 简化最小视差 (18->0)
     int pre_filter_cap = 31;
-    int texture_threshold = 50;
-    int uniqueness_ratio = 18;
-    int speckle_window_size = 83;
-    int speckle_range = 32;
-    int disp12_max_diff = 1;
+    int texture_threshold = 10;    // 降低纹理阈值 (50->10)
+    int uniqueness_ratio = 15;     // 降低唯一性比率 (18->15)
+    int speckle_window_size = 50;  // 减少斑点窗口 (83->50)
+    int speckle_range = 16;        // 减少斑点范围 (32->16)
+    int disp12_max_diff = 2;       // 放宽差值限制 (1->2)
 };
 
 struct DistanceConstraints {

@@ -92,7 +92,7 @@ stereo_camera_ros2_node_EXTERNAL_OBJECTS =
 
 stereo_camera_ros2_node: CMakeFiles/stereo_camera_ros2_node.dir/src/stereo_camera_ros2_node.cpp.o
 stereo_camera_ros2_node: CMakeFiles/stereo_camera_ros2_node.dir/build.make
-stereo_camera_ros2_node: libstereo_camera_cpp_lib.a
+stereo_camera_ros2_node: libstereo_camera_cpp_lib.so
 stereo_camera_ros2_node: /usr/lib/aarch64-linux-gnu/libopencv_stitching.so.4.5.4d
 stereo_camera_ros2_node: /usr/lib/aarch64-linux-gnu/libopencv_alphamat.so.4.5.4d
 stereo_camera_ros2_node: /usr/lib/aarch64-linux-gnu/libopencv_aruco.so.4.5.4d
@@ -131,6 +131,7 @@ stereo_camera_ros2_node: /usr/lib/aarch64-linux-gnu/libopencv_xphoto.so.4.5.4d
 stereo_camera_ros2_node: /opt/ros/humble/lib/libcv_bridge.so
 stereo_camera_ros2_node: /opt/ros/humble/lib/aarch64-linux-gnu/libimage_transport.so
 stereo_camera_ros2_node: /opt/ros/humble/lib/libstatic_transform_broadcaster_node.so
+stereo_camera_ros2_node: libstereo_camera_cpp__rosidl_typesupport_cpp.so
 stereo_camera_ros2_node: /usr/lib/aarch64-linux-gnu/libopencv_phase_unwrapping.so.4.5.4d
 stereo_camera_ros2_node: /usr/lib/aarch64-linux-gnu/libopencv_optflow.so.4.5.4d
 stereo_camera_ros2_node: /usr/lib/aarch64-linux-gnu/libopencv_highgui.so.4.5.4d
@@ -228,12 +229,8 @@ stereo_camera_ros2_node: /opt/ros/humble/lib/libunique_identifier_msgs__rosidl_t
 stereo_camera_ros2_node: /opt/ros/humble/lib/librosidl_typesupport_introspection_cpp.so
 stereo_camera_ros2_node: /opt/ros/humble/lib/librosidl_typesupport_introspection_c.so
 stereo_camera_ros2_node: /opt/ros/humble/lib/libtf2_msgs__rosidl_typesupport_cpp.so
-stereo_camera_ros2_node: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_cpp.so
-stereo_camera_ros2_node: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_cpp.so
 stereo_camera_ros2_node: /opt/ros/humble/lib/libaction_msgs__rosidl_typesupport_cpp.so
-stereo_camera_ros2_node: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_cpp.so
 stereo_camera_ros2_node: /opt/ros/humble/lib/libunique_identifier_msgs__rosidl_typesupport_cpp.so
-stereo_camera_ros2_node: /opt/ros/humble/lib/librosidl_typesupport_cpp.so
 stereo_camera_ros2_node: /opt/ros/humble/lib/libtf2_msgs__rosidl_generator_py.so
 stereo_camera_ros2_node: /opt/ros/humble/lib/libgeometry_msgs__rosidl_generator_py.so
 stereo_camera_ros2_node: /opt/ros/humble/lib/libstd_msgs__rosidl_generator_py.so
@@ -252,9 +249,13 @@ stereo_camera_ros2_node: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_gener
 stereo_camera_ros2_node: /opt/ros/humble/lib/libunique_identifier_msgs__rosidl_generator_py.so
 stereo_camera_ros2_node: /usr/lib/aarch64-linux-gnu/libpython3.10.so
 stereo_camera_ros2_node: /opt/ros/humble/lib/libunique_identifier_msgs__rosidl_typesupport_c.so
+stereo_camera_ros2_node: /opt/ros/humble/lib/libunique_identifier_msgs__rosidl_generator_c.so
+stereo_camera_ros2_node: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_cpp.so
+stereo_camera_ros2_node: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_cpp.so
+stereo_camera_ros2_node: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_cpp.so
+stereo_camera_ros2_node: /opt/ros/humble/lib/librosidl_typesupport_cpp.so
 stereo_camera_ros2_node: /opt/ros/humble/lib/librosidl_typesupport_c.so
 stereo_camera_ros2_node: /opt/ros/humble/lib/librcpputils.so
-stereo_camera_ros2_node: /opt/ros/humble/lib/libunique_identifier_msgs__rosidl_generator_c.so
 stereo_camera_ros2_node: /opt/ros/humble/lib/librosidl_runtime_c.so
 stereo_camera_ros2_node: /opt/ros/humble/lib/librcutils.so
 stereo_camera_ros2_node: CMakeFiles/stereo_camera_ros2_node.dir/link.txt

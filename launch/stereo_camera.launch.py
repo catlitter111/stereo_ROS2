@@ -6,6 +6,7 @@ from launch.actions import DeclareLaunchArgument, LogInfo
 from launch.substitutions import LaunchConfiguration, PathJoinSubstitution
 from launch_ros.actions import Node
 from launch_ros.substitutions import FindPackageShare
+import launch.conditions
 
 def generate_launch_description():
     # 声明启动参数
@@ -51,6 +52,12 @@ def generate_launch_description():
         description='相机坐标系ID'
     )
     
+    enable_display_arg = DeclareLaunchArgument(
+        'enable_display',
+        default_value='true',
+        description='是否启动显示节点'
+    )
+    
     # 双目相机节点
     stereo_camera_node = Node(
         package='stereo_camera_cpp',
@@ -72,6 +79,21 @@ def generate_launch_description():
             ('/stereo/disparity', '/stereo_camera/disparity'),
             ('/stereo/center_distance', '/stereo_camera/center_distance'),
         ]
+    )
+    
+    # 显示节点
+    stereo_display_node = Node(
+        package='stereo_camera_cpp',
+        executable='stereo_display_node',
+        name='stereo_display_node',
+        output='screen',
+        parameters=[{
+            'window_name': 'Stereo Camera - Left View',
+            'fps_buffer_size': 30,
+            'font_scale': 0.7,
+            'font_thickness': 2,
+        }],
+        condition=launch.conditions.IfCondition(LaunchConfiguration('enable_display'))
     )
     
     # 可选: 启动rviz2进行可视化
@@ -98,11 +120,13 @@ def generate_launch_description():
         process_height_arg,
         publish_rate_arg,
         camera_frame_id_arg,
+        enable_display_arg,
         
         # 信息输出
         LogInfo(msg=['启动双目相机节点，相机ID: ', LaunchConfiguration('camera_id')]),
         
         # 节点
         stereo_camera_node,
+        stereo_display_node,
         # rviz_node,  # 取消注释以启动rviz2
     ])

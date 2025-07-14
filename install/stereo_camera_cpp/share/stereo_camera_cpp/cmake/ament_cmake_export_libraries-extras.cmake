@@ -1,6 +1,6 @@
 # generated from ament_cmake_export_libraries/cmake/template/ament_cmake_export_libraries.cmake.in
 
-set(_exported_libraries "stereo_camera_cpp_lib")
+set(_exported_libraries "stereo_camera_cpp__rosidl_generator_c;stereo_camera_cpp__rosidl_typesupport_c;stereo_camera_cpp__rosidl_typesupport_cpp;stereo_camera_cpp_lib")
 set(_exported_library_names "")
 
 # populate stereo_camera_cpp_LIBRARIES

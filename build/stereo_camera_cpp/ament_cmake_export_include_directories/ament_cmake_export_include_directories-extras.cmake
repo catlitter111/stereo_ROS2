@@ -1,6 +1,6 @@
 # generated from ament_cmake_export_include_directories/cmake/ament_cmake_export_include_directories-extras.cmake.in
 
-set(_exported_include_dirs "${stereo_camera_cpp_DIR}/../../../include")
+set(_exported_include_dirs "${stereo_camera_cpp_DIR}/../../../include/stereo_camera_cpp;${stereo_camera_cpp_DIR}/../../../include")
 
 # append include directories to stereo_camera_cpp_INCLUDE_DIRS
 # warn about not existing paths

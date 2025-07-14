@@ -915,4 +915,10 @@ CMakeFiles/stereo_camera_ros2_node.dir/src/stereo_camera_ros2_node.cpp.o
  /opt/ros/humble/include/tf2_msgs/tf2_msgs/msg/detail/tf_message__type_support.hpp
  /opt/ros/humble/include/tf2_msgs/tf2_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
  /opt/ros/humble/include/tf2_ros/tf2_ros/qos.hpp
+ /userdata/stereo_demo/build/stereo_camera_cpp/rosidl_generator_cpp/stereo_camera_cpp/srv/get_distance.hpp
+ /userdata/stereo_demo/build/stereo_camera_cpp/rosidl_generator_cpp/stereo_camera_cpp/srv/detail/get_distance__struct.hpp
+ /userdata/stereo_demo/build/stereo_camera_cpp/rosidl_generator_cpp/stereo_camera_cpp/srv/detail/get_distance__builder.hpp
+ /userdata/stereo_demo/build/stereo_camera_cpp/rosidl_generator_cpp/stereo_camera_cpp/srv/detail/get_distance__traits.hpp
+ /userdata/stereo_demo/build/stereo_camera_cpp/rosidl_generator_cpp/stereo_camera_cpp/srv/detail/get_distance__type_support.hpp
+ /userdata/stereo_demo/build/stereo_camera_cpp/rosidl_generator_cpp/stereo_camera_cpp/msg/rosidl_generator_cpp__visibility_control.hpp
 

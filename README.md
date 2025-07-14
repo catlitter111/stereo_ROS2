@@ -73,15 +73,32 @@ export OPENCV_VIDEOIO_DISABLE_GSTREAMER=1
 
 ### 2. ROS2节点运行
 ```bash
-# 启动ROS2节点
+# 启动ROS2节点（仅后台处理）
 ros2 run stereo_camera_cpp stereo_camera_ros2_node
 
-# 使用launch文件启动
-ros2 launch stereo_camera_cpp stereo_camera.launch.py
+# 使用launch文件启动（不带显示）
+ros2 launch stereo_camera_cpp stereo_camera.launch.py camera_id:=1 enable_display:=false
 
-# 自定义参数启动（推荐）
-ros2 launch stereo_camera_cpp stereo_camera.launch.py camera_id:=1 publish_rate:=15.0
+# 启动带显示窗口的完整系统（推荐）
+ros2 launch stereo_camera_cpp stereo_with_display.launch.py camera_id:=1
+
+# 自定义参数启动
+ros2 launch stereo_camera_cpp stereo_camera.launch.py camera_id:=1 publish_rate:=15.0 enable_display:=true
 ```
+
+### 2.1 显示节点功能
+实时显示窗口包含：
+- **左目相机图像**: 校正后的实时视频流
+- **FPS显示**: 实时帧率统计
+- **帧数计数**: 总处理帧数
+- **距离测量**: 中心点距离（米）
+- **时间戳**: 当前时间
+- **中心十字线**: 红色十字标记测距中心点
+
+操作说明：
+- 关闭窗口将自动停止所有节点
+- 所有信息实时更新
+- 绿色文本带黑色背景提高可读性
 
 ### 3. 查看ROS2话题
 ```bash

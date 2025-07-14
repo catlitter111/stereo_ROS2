@@ -1,0 +1,33 @@
+[INFO] [launch]: All log files can be found below /home/monster/.ros/log/2025-07-14-10-23-17-776408-EAI-BOX2000-17028
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [launch.user]: 启动双目相机系统，相机ID: 1
+[INFO] [launch.user]: 显示窗口将显示左目图像、FPS和距离信息
+[INFO] [stereo_camera_ros2_node-1]: process started with pid [17050]
+[INFO] [stereo_display_node-2]: process started with pid [17052]
+[stereo_display_node-2] [INFO] [1752459798.021713570] [stereo_display_node]: 双目显示节点已启动
+[stereo_display_node-2] [INFO] [1752459798.021902571] [stereo_display_node]: 等待图像数据以创建显示窗口...
+[stereo_display_node-2] [INFO] [1752459798.022231574] [stereo_display_node]: 等待距离检测服务可用...
+[stereo_camera_ros2_node-1] [INFO] [1752459798.053142624] [stereo_camera_node]: 双目相机ROS2节点已启动
+[stereo_camera_ros2_node-1] [INFO] 扫描可用相机设备 (最多测试10个设备)...
+[stereo_camera_ros2_node-1] [ WARN:0] global ./modules/videoio/src/cap_v4l.cpp (890) open VIDEOIO(V4L2:/dev/video0): can't open camera by index
+[stereo_camera_ros2_node-1] [INFO] 发现相机设备: /dev/video1
+[stereo_camera_ros2_node-1] [ WARN:0] global ./modules/videoio/src/cap_v4l.cpp (890) open VIDEOIO(V4L2:/dev/video2): can't open camera by index
+[stereo_camera_ros2_node-1] [ WARN:0] global ./modules/videoio/src/cap_v4l.cpp (890) open VIDEOIO(V4L2:/dev/video3): can't open camera by index
+[stereo_camera_ros2_node-1] [ WARN:0] global ./modules/videoio/src/cap_v4l.cpp (890) open VIDEOIO(V4L2:/dev/video4): can't open camera by index
+[stereo_camera_ros2_node-1] [ WARN:0] global ./modules/videoio/src/cap_v4l.cpp (890) open VIDEOIO(V4L2:/dev/video5): can't open camera by index
+[stereo_camera_ros2_node-1] [ WARN:0] global ./modules/videoio/src/cap_v4l.cpp (890) open VIDEOIO(V4L2:/dev/video6): can't open camera by index
+[stereo_camera_ros2_node-1] [ WARN:0] global ./modules/videoio/src/cap_v4l.cpp (890) open VIDEOIO(V4L2:/dev/video7): can't open camera by index
+[stereo_camera_ros2_node-1] [ WARN:0] global ./modules/videoio/src/cap_v4l.cpp (890) open VIDEOIO(V4L2:/dev/video8): can't open camera by index
+[stereo_camera_ros2_node-1] [ WARN:0] global ./modules/videoio/src/cap_v4l.cpp (890) open VIDEOIO(V4L2:/dev/video9): can't open camera by index
+[stereo_camera_ros2_node-1] [INFO] [1752459798.468015417] [stereo_camera_node]: 发现 1 个可用相机设备
+[stereo_camera_ros2_node-1] [INFO] [1752459798.468109917] [stereo_camera_node]: 可用相机: /dev/video1
+[stereo_camera_ros2_node-1] [INFO] 总共发现 1 个相机设备
+[stereo_camera_ros2_node-1] [INFO] 硬编码相机参数加载成功
+[stereo_camera_ros2_node-1] [INFO] 成功打开相机 ID=1, 请求分辨率=1280x480, 实际分辨率=1280x480
+[stereo_camera_ros2_node-1] [INFO] 双目校正参数设置完成
+[stereo_camera_ros2_node-1] [INFO] [1752459798.812029711] [stereo_camera_node]: 双目相机节点初始化完成，距离检测服务已启用
+[stereo_camera_ros2_node-1] [INFO] [1752459798.812046919] [stereo_camera_node]: 3D点云计算线程已启动
+[stereo_display_node-2] [INFO] [1752459799.022482316] [stereo_display_node]: 距离检测服务尚未可用，继续等待...
+[stereo_display_node-2] [INFO] [1752459799.201683501] [stereo_display_node]: 创建显示窗口: Stereo Camera - Real-time Display
+[stereo_display_node-2] [INFO] [1752459799.201752043] [stereo_display_node]: 窗口控制: 按 'q' 或 ESC 键退出
+[stereo_display_node-2] [INFO] [1752459804.023201936] [stereo_display_node]: 距离检测服务尚未可用，继续等待...

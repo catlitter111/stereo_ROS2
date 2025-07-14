@@ -1,0 +1,12 @@
+[INFO] [launch]: All log files can be found below /home/monster/.ros/log/2025-07-14-10-20-47-679166-EAI-BOX2000-16004
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [launch.user]: 启动双目相机系统，相机ID: 1
+[INFO] [launch.user]: 显示窗口将显示左目图像、FPS和距离信息
+[INFO] [stereo_camera_ros2_node-1]: process started with pid [16027]
+[ERROR] [stereo_camera_ros2_node-1]: process has died [pid 16027, exit code 127, cmd '/userdata/stereo_demo/install/stereo_camera_cpp/lib/stereo_camera_cpp/stereo_camera_ros2_node --ros-args -r __node:=stereo_camera_node --params-file /tmp/launch_params_g94xmkik -r /stereo/left/image_rectified:=/stereo_camera/left/image_rectified -r /stereo/right/image_rectified:=/stereo_camera/right/image_rectified -r /stereo/disparity:=/stereo_camera/disparity -r /stereo/center_distance:=/stereo_camera/center_distance'].
+[INFO] [stereo_display_node-2]: process started with pid [16029]
+[stereo_camera_ros2_node-1] /userdata/stereo_demo/install/stereo_camera_cpp/lib/stereo_camera_cpp/stereo_camera_ros2_node: error while loading shared libraries: libstereo_camera_cpp_lib.so: cannot open shared object file: No such file or directory
+[stereo_display_node-2] [INFO] [1752459647.913000159] [stereo_display_node]: 双目显示节点已启动
+[stereo_display_node-2] [INFO] [1752459647.913196742] [stereo_display_node]: 等待图像数据以创建显示窗口...
+[stereo_display_node-2] [INFO] [1752459647.913345492] [stereo_display_node]: 等待距离检测服务可用...
+[stereo_display_node-2] [INFO] [1752459648.913566844] [stereo_display_node]: 距离检测服务尚未可用，继续等待...

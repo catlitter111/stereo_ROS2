@@ -92,7 +92,7 @@ stereo_camera_demo_EXTERNAL_OBJECTS =
 
 stereo_camera_demo: CMakeFiles/stereo_camera_demo.dir/src/main.cpp.o
 stereo_camera_demo: CMakeFiles/stereo_camera_demo.dir/build.make
-stereo_camera_demo: libstereo_camera_cpp_lib.a
+stereo_camera_demo: libstereo_camera_cpp_lib.so
 stereo_camera_demo: /usr/lib/aarch64-linux-gnu/libopencv_stitching.so.4.5.4d
 stereo_camera_demo: /usr/lib/aarch64-linux-gnu/libopencv_alphamat.so.4.5.4d
 stereo_camera_demo: /usr/lib/aarch64-linux-gnu/libopencv_aruco.so.4.5.4d

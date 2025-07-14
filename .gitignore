@@ -1,0 +1,8 @@
+build/
+install/
+log/
+build_isolated/
+devel_isolated/
+install_isolated/
+log_isolated/
+
