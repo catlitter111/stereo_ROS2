@@ -90,6 +90,11 @@ public:
     std::optional<double> calculate_distance(const cv::Vec3f& point_3d) const;
     std::optional<double> get_object_distance(const cv::Mat& points_3d, cv::Point2i center, int radius = 3) const;
     
+    // 坐标变换服务
+    cv::Point2f transform_raw_to_rectified(const cv::Point2f& raw_point) const;
+    cv::Point2f transform_rectified_to_raw(const cv::Point2f& rectified_point) const;
+    bool is_rectification_ready() const;
+    
     // 参数设置
     void set_stereo_matcher_params(const StereoMatcherParams& params);
     void set_distance_constraints(const DistanceConstraints& constraints);

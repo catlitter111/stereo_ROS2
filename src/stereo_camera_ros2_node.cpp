@@ -166,11 +166,11 @@ private:
         // 发布原始图像（不包含视差图，提高帧率）
         publish_images(left_frame, right_frame, timestamp);
         
-        // 通知3D点云计算线程有新图像
+        // 通知3D点云计算线程有新图像（性能优化：使用共享指针避免复制）
         {
             std::lock_guard<std::mutex> lock(rectified_images_mutex_);
-            current_left_rectified_ = left_rectified.clone();
-            current_right_rectified_ = right_rectified.clone();
+            current_left_rectified_ = std::make_shared<cv::Mat>(left_rectified.clone());
+            current_right_rectified_ = std::make_shared<cv::Mat>(right_rectified.clone());
             new_rectified_images_ = true;
         }
         rectified_images_cv_.notify_one();
@@ -224,25 +224,30 @@ private:
     void points_3d_worker() {
         RCLCPP_INFO(this->get_logger(), "3D点云计算线程已启动");
         
-        cv::Mat left_rect, right_rect;
+        ImagePtr left_rect_ptr, right_rect_ptr;
         
         while (rclcpp::ok()) {
-            // 等待新的校正图像
+            // 等待新的校正图像（性能优化：使用共享指针）
             {
                 std::unique_lock<std::mutex> lock(rectified_images_mutex_);
                 rectified_images_cv_.wait(lock, [this] { return new_rectified_images_ || !rclcpp::ok(); });
                 
                 if (!rclcpp::ok()) break;
                 
-                left_rect = current_left_rectified_.clone();
-                right_rect = current_right_rectified_.clone();
+                left_rect_ptr = current_left_rectified_;
+                right_rect_ptr = current_right_rectified_;
                 new_rectified_images_ = false;
             }
             
-            // 计算视差和3D点云
+            // 检查共享指针有效性
+            if (!left_rect_ptr || !right_rect_ptr) {
+                continue;
+            }
+            
+            // 计算视差和3D点云（使用共享指针的数据）
             cv::Mat disparity, disparity_normalized, points_3d;
             
-            if (stereo_camera_->compute_disparity(left_rect, right_rect, disparity, disparity_normalized) &&
+            if (stereo_camera_->compute_disparity(*left_rect_ptr, *right_rect_ptr, disparity, disparity_normalized) &&
                 stereo_camera_->compute_3d_points(disparity, points_3d)) {
                 
                 // 更新当前3D点云数据
@@ -297,15 +302,22 @@ private:
         }
         
         // 检查请求参数
-        cv::Point2i center_point(static_cast<int>(request->center_x), 
-                                 static_cast<int>(request->center_y));
+        cv::Point2f raw_center_point(static_cast<float>(request->center_x), 
+                                     static_cast<float>(request->center_y));
         int radius = std::max(1, std::min(request->radius, 50));  // 限制半径范围
         
-        // 检查坐标有效性
+        // 坐标变换：从原始图像坐标转换为校正图像坐标
+        cv::Point2f rectified_center_point = stereo_camera_->transform_raw_to_rectified(raw_center_point);
+        cv::Point2i center_point(static_cast<int>(rectified_center_point.x), 
+                                 static_cast<int>(rectified_center_point.y));
+        
+        // 检查变换后坐标的有效性
         if (center_point.x < 0 || center_point.x >= points_3d.cols ||
             center_point.y < 0 || center_point.y >= points_3d.rows) {
             response->success = false;
-            response->error_message = "检测点坐标超出图像范围";
+            response->error_message = "坐标变换后超出有效范围 (原始坐标: " + 
+                                    std::to_string(raw_center_point.x) + "," + std::to_string(raw_center_point.y) + 
+                                    " -> 校正坐标: " + std::to_string(center_point.x) + "," + std::to_string(center_point.y) + ")";
             return;
         }
         
@@ -318,7 +330,8 @@ private:
             response->timestamp = timestamp;
             
             RCLCPP_DEBUG(this->get_logger(), 
-                        "距离检测成功: 点(%d,%d), 半径%d, 距离%.3fm", 
+                        "距离检测成功: 原始点(%.1f,%.1f) -> 校正点(%d,%d), 半径%d, 距离%.3fm", 
+                        raw_center_point.x, raw_center_point.y, 
                         center_point.x, center_point.y, radius, distance.value());
         } else {
             response->success = false;
@@ -344,11 +357,12 @@ private:
     // 多线程相关
     std::thread points_3d_thread_;
     
-    // 校正图像共享数据
+    // 校正图像共享数据（性能优化：使用共享指针）
+    using ImagePtr = std::shared_ptr<cv::Mat>;
     std::mutex rectified_images_mutex_;
     std::condition_variable rectified_images_cv_;
-    cv::Mat current_left_rectified_;
-    cv::Mat current_right_rectified_;
+    ImagePtr current_left_rectified_;
+    ImagePtr current_right_rectified_;
     bool new_rectified_images_ = false;
     
     // 3D点云共享数据

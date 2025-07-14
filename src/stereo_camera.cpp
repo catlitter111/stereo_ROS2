@@ -365,6 +365,122 @@ void StereoCamera::set_distance_constraints(const DistanceConstraints& constrain
     distance_constraints_ = constraints;
 }
 
+// 坐标变换实现
+cv::Point2f StereoCamera::transform_raw_to_rectified(const cv::Point2f& raw_point) const {
+    if (!is_rectification_ready()) {
+        std::cerr << "[ERROR] 双目校正尚未设置，无法进行坐标变换" << std::endl;
+        return raw_point;  // 返回原坐标作为fallback
+    }
+    
+    try {
+        // 输入点转换为列向量 [x, y, 1]
+        std::vector<cv::Point2f> raw_points = {raw_point};
+        std::vector<cv::Point2f> rectified_points;
+        
+        // 使用OpenCV的remap逆映射进行坐标变换
+        // 由于我们有校正映射left_map1_, left_map2_，我们需要找到逆映射
+        
+        // 方法1：使用双线性插值在映射表中查找最近匹配
+        cv::Point2f result_point = raw_point;
+        
+        // 在校正映射中搜索最匹配的原始坐标
+        float min_distance = std::numeric_limits<float>::max();
+        int search_radius = 2; // 搜索半径
+        
+        int start_x = std::max(0, static_cast<int>(raw_point.x) - search_radius);
+        int end_x = std::min(left_map1_.cols - 1, static_cast<int>(raw_point.x) + search_radius);
+        int start_y = std::max(0, static_cast<int>(raw_point.y) - search_radius);
+        int end_y = std::min(left_map1_.rows - 1, static_cast<int>(raw_point.y) + search_radius);
+        
+        for (int y = start_y; y <= end_y; ++y) {
+            for (int x = start_x; x <= end_x; ++x) {
+                cv::Point2f mapped_point(left_map1_.at<float>(y, x), left_map2_.at<float>(y, x));
+                
+                if (mapped_point.x >= 0 && mapped_point.y >= 0) {
+                    float distance = cv::norm(mapped_point - raw_point);
+                    if (distance < min_distance) {
+                        min_distance = distance;
+                        result_point = cv::Point2f(x, y);
+                    }
+                }
+            }
+        }
+        
+        return result_point;
+        
+    } catch (const cv::Exception& e) {
+        std::cerr << "[ERROR] 坐标变换出错: " << e.what() << std::endl;
+        return raw_point;
+    }
+}
+
+cv::Point2f StereoCamera::transform_rectified_to_raw(const cv::Point2f& rectified_point) const {
+    if (!is_rectification_ready()) {
+        std::cerr << "[ERROR] 双目校正尚未设置，无法进行坐标变换" << std::endl;
+        return rectified_point;  // 返回原坐标作为fallback
+    }
+    
+    try {
+        // 检查坐标是否在有效范围内
+        if (rectified_point.x < 0 || rectified_point.x >= left_map1_.cols ||
+            rectified_point.y < 0 || rectified_point.y >= left_map1_.rows) {
+            return rectified_point; // 超出范围，返回原坐标
+        }
+        
+        // 直接从校正映射表中查找对应的原始坐标
+        int x = static_cast<int>(rectified_point.x);
+        int y = static_cast<int>(rectified_point.y);
+        
+        // 使用双线性插值获得精确的映射坐标
+        float fx = rectified_point.x - x;
+        float fy = rectified_point.y - y;
+        
+        // 四个邻近点的映射值
+        cv::Point2f p00(left_map1_.at<float>(y, x), left_map2_.at<float>(y, x));
+        cv::Point2f p01, p10, p11;
+        
+        if (x + 1 < left_map1_.cols) {
+            p10 = cv::Point2f(left_map1_.at<float>(y, x + 1), left_map2_.at<float>(y, x + 1));
+        } else {
+            p10 = p00;
+        }
+        
+        if (y + 1 < left_map1_.rows) {
+            p01 = cv::Point2f(left_map1_.at<float>(y + 1, x), left_map2_.at<float>(y + 1, x));
+        } else {
+            p01 = p00;
+        }
+        
+        if (x + 1 < left_map1_.cols && y + 1 < left_map1_.rows) {
+            p11 = cv::Point2f(left_map1_.at<float>(y + 1, x + 1), left_map2_.at<float>(y + 1, x + 1));
+        } else {
+            p11 = p00;
+        }
+        
+        // 双线性插值
+        cv::Point2f p0 = p00 * (1.0f - fx) + p10 * fx;
+        cv::Point2f p1 = p01 * (1.0f - fx) + p11 * fx;
+        cv::Point2f result = p0 * (1.0f - fy) + p1 * fy;
+        
+        // 验证结果是否有效
+        if (result.x >= 0 && result.y >= 0) {
+            return result;
+        } else {
+            return rectified_point; // 无效映射，返回原坐标
+        }
+        
+    } catch (const cv::Exception& e) {
+        std::cerr << "[ERROR] 坐标变换出错: " << e.what() << std::endl;
+        return rectified_point;
+    }
+}
+
+bool StereoCamera::is_rectification_ready() const {
+    return !left_map1_.empty() && !left_map2_.empty() && 
+           !right_map1_.empty() && !right_map2_.empty() &&
+           calibration_.is_valid();
+}
+
 bool StereoCamera::validate_frame_size(const cv::Mat& frame) const {
     return frame.cols == frame_size_.width && frame.rows == frame_size_.height;
 }
