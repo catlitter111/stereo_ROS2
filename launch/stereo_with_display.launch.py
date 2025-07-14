@@ -35,8 +35,8 @@ def generate_launch_description():
             'camera_frame_id': 'stereo_camera',
         }],
         remappings=[
-            ('/stereo/left/image_rectified', '/stereo_camera/left/image_rectified'),
-            ('/stereo/right/image_rectified', '/stereo_camera/right/image_rectified'),
+            ('/stereo/left/image_raw', '/stereo_camera/left/image_raw'),
+            ('/stereo/right/image_raw', '/stereo_camera/right/image_raw'),
             ('/stereo/disparity', '/stereo_camera/disparity'),
             ('/stereo/center_distance', '/stereo_camera/center_distance'),
             ('/stereo/get_distance', '/stereo_camera/stereo/get_distance'),

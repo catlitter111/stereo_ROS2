@@ -30,12 +30,14 @@ public:
         // 初始化变量
         last_distance_ = 0.0;
         distance_valid_ = false;
+        last_error_message_ = "";
+        service_connected_ = false;
         frame_count_ = 0;
         fps_timestamps_.resize(fps_buffer_size_);
         
         // 创建图像订阅者
         image_sub_ = this->create_subscription<sensor_msgs::msg::Image>(
-            "/stereo_camera/left/image_rectified", 10,
+            "/stereo_camera/left/image_raw", 10,
             std::bind(&StereoDisplayNode::image_callback, this, std::placeholders::_1)
         );
         
@@ -102,11 +104,24 @@ private:
         if (rclcpp::ok() && distance_client_->service_is_ready()) {
             RCLCPP_INFO(this->get_logger(), "距离检测服务已连接，开始距离检测");
             
+            {
+                std::lock_guard<std::mutex> lock(distance_mutex_);
+                service_connected_ = true;
+                last_error_message_ = "";
+            }
+            
             // 启动距离请求定时器
             distance_request_timer_->reset();
         } else {
             // 即使服务暂时不可用，也启动定时器，在请求时再检查
             RCLCPP_WARN(this->get_logger(), "启动距离检测定时器，将在服务可用时开始工作");
+            
+            {
+                std::lock_guard<std::mutex> lock(distance_mutex_);
+                service_connected_ = false;
+                last_error_message_ = "距离检测服务不可用";
+            }
+            
             distance_request_timer_->reset();
         }
     }
@@ -171,7 +186,16 @@ private:
         if (!distance_client_->service_is_ready()) {
             RCLCPP_WARN_THROTTLE(this->get_logger(), *this->get_clock(), 5000,
                                 "距离检测服务不可用");
+            {
+                std::lock_guard<std::mutex> lock(distance_mutex_);
+                service_connected_ = false;
+                last_error_message_ = "距离检测服务连接断开";
+            }
             return;
+        } else {
+            // 服务可用，更新连接状态
+            std::lock_guard<std::mutex> lock(distance_mutex_);
+            service_connected_ = true;
         }
         
         // 创建请求（检测图像中心点）
@@ -199,10 +223,12 @@ private:
                 last_distance_ = response->distance;
                 distance_valid_ = true;
                 last_distance_time_ = this->get_clock()->now();
+                last_error_message_ = "";
                 
                 RCLCPP_DEBUG(this->get_logger(), "距离检测成功: %.3f m", response->distance);
             } else {
                 distance_valid_ = false;
+                last_error_message_ = response->error_message;
                 RCLCPP_DEBUG(this->get_logger(), "距离检测失败: %s", 
                            response->error_message.c_str());
             }
@@ -210,6 +236,7 @@ private:
             RCLCPP_WARN(this->get_logger(), "距离检测响应处理异常: %s", e.what());
             std::lock_guard<std::mutex> lock(distance_mutex_);
             distance_valid_ = false;
+            last_error_message_ = "距离检测响应异常: " + std::string(e.what());
         }
     }
     
@@ -256,17 +283,37 @@ private:
         {
             std::lock_guard<std::mutex> lock(distance_mutex_);
             auto now = this->get_clock()->now();
-            if (distance_valid_ && last_distance_time_.nanoseconds() > 0) {
+            
+            if (!service_connected_) {
+                texts.push_back("Distance: Service Offline");
+                if (!last_error_message_.empty()) {
+                    // 截断长错误信息以适应显示
+                    std::string error_display = last_error_message_;
+                    if (error_display.length() > 30) {
+                        error_display = error_display.substr(0, 27) + "...";
+                    }
+                    texts.push_back("Error: " + error_display);
+                }
+            } else if (distance_valid_ && last_distance_time_.nanoseconds() > 0) {
                 auto time_diff = (now - last_distance_time_).seconds();
                 if (time_diff < 2.0) {  // 2秒内的数据被认为是有效的
                     std::string distance_text = "Distance: " + 
                         std::to_string(last_distance_).substr(0, 5) + "m";
                     texts.push_back(distance_text);
                 } else {
-                    texts.push_back("Distance: Stale Data");
+                    texts.push_back("Distance: Data Outdated");
                 }
             } else {
-                texts.push_back("Distance: Waiting...");
+                if (!last_error_message_.empty()) {
+                    // 显示具体错误信息而不是泛泛的"Waiting"
+                    std::string error_display = last_error_message_;
+                    if (error_display.length() > 25) {
+                        error_display = error_display.substr(0, 22) + "...";
+                    }
+                    texts.push_back("Distance: " + error_display);
+                } else {
+                    texts.push_back("Distance: Initializing...");
+                }
             }
         }
         
@@ -358,6 +405,8 @@ private:
     double last_distance_;
     bool distance_valid_;
     rclcpp::Time last_distance_time_;
+    std::string last_error_message_;  // 最后一次距离检测错误信息
+    bool service_connected_;          // 服务连接状态
     uint64_t frame_count_;
     double current_fps_;
     bool window_created_;

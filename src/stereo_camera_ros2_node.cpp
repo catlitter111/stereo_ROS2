@@ -87,8 +87,8 @@ private:
         // 初始化图像传输
         auto node_ptr = std::dynamic_pointer_cast<rclcpp::Node>(shared_from_this());
         image_transport::ImageTransport it(node_ptr);
-        left_image_pub_ = it.advertise("stereo/left/image_rectified", 1);
-        right_image_pub_ = it.advertise("stereo/right/image_rectified", 1);
+        left_image_pub_ = it.advertise("stereo/left/image_raw", 1);
+        right_image_pub_ = it.advertise("stereo/right/image_raw", 1);
         disparity_pub_ = it.advertise("stereo/disparity", 1);
         
         // 初始化相机
@@ -163,8 +163,8 @@ private:
         // 获取时间戳
         auto timestamp = this->get_clock()->now();
         
-        // 发布图像（不包含视差图，提高帧率）
-        publish_images(left_rectified, right_rectified, timestamp);
+        // 发布原始图像（不包含视差图，提高帧率）
+        publish_images(left_frame, right_frame, timestamp);
         
         // 通知3D点云计算线程有新图像
         {
@@ -176,21 +176,41 @@ private:
         rectified_images_cv_.notify_one();
     }
     
-    void publish_images(const cv::Mat& left_rectified, const cv::Mat& right_rectified,
+    void publish_images(const cv::Mat& left_raw, const cv::Mat& right_raw,
                        const rclcpp::Time& timestamp) {
         try {
-            // 转换灰度图为彩色图用于显示
+            // 确定原始图像格式并转换为BGR用于发布
             cv::Mat left_color, right_color;
-            cv::cvtColor(left_rectified, left_color, cv::COLOR_GRAY2BGR);
-            cv::cvtColor(right_rectified, right_color, cv::COLOR_GRAY2BGR);
             
-            // 转换并发布左图像（彩色）
+            if (left_raw.channels() == 1) {
+                // 灰度图转换为彩色
+                cv::cvtColor(left_raw, left_color, cv::COLOR_GRAY2BGR);
+            } else if (left_raw.channels() == 3) {
+                // 已经是彩色图，直接使用
+                left_color = left_raw;
+            } else {
+                RCLCPP_WARN(this->get_logger(), "不支持的左图像通道数: %d", left_raw.channels());
+                return;
+            }
+            
+            if (right_raw.channels() == 1) {
+                // 灰度图转换为彩色
+                cv::cvtColor(right_raw, right_color, cv::COLOR_GRAY2BGR);
+            } else if (right_raw.channels() == 3) {
+                // 已经是彩色图，直接使用
+                right_color = right_raw;
+            } else {
+                RCLCPP_WARN(this->get_logger(), "不支持的右图像通道数: %d", right_raw.channels());
+                return;
+            }
+            
+            // 转换并发布左图像（原始图像）
             auto left_msg = cv_bridge::CvImage(std_msgs::msg::Header(), "bgr8", left_color).toImageMsg();
             left_msg->header.stamp = timestamp;
             left_msg->header.frame_id = frame_id_;
             left_image_pub_.publish(left_msg);
             
-            // 转换并发布右图像（彩色）
+            // 转换并发布右图像（原始图像）
             auto right_msg = cv_bridge::CvImage(std_msgs::msg::Header(), "bgr8", right_color).toImageMsg();
             right_msg->header.stamp = timestamp;
             right_msg->header.frame_id = frame_id_;
