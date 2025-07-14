@@ -39,30 +39,30 @@ bool StereoCamera::load_camera_params_from_hardcoded() {
     try {
         // 左相机内参
         cv::Mat left_camera_matrix = (cv::Mat_<double>(3, 3) << 
-            479.511022870591, -0.276113089875797, 325.165562307888,
-            0.0, 482.402195086215, 267.117105422009,
+            660.582489639164, 0.0, 325.4819504534,
+            0.0, 660.866445217467, 208.565695855911,
             0.0, 0.0, 1.0);
         
         cv::Mat left_distortion = (cv::Mat_<double>(1, 5) <<
-            0.0544639674308284, -0.0266591889115199, 0.00955609439715649, -0.0026033932373644, 0.0);
+            -0.0698054920007549, 0.150876122410209, 0.0, 0.0, 0.0);
         
         // 右相机内参
         cv::Mat right_camera_matrix = (cv::Mat_<double>(3, 3) <<
-            478.352067946262, 0.544542937907123, 314.900427485172,
-            0.0, 481.875120562091, 267.794159848602,
+            665.609485473203, 0.0, 319.634648191712,
+            0.0, 665.428683717386, 215.478083368032,
             0.0, 0.0, 1.0);
         
         cv::Mat right_distortion = (cv::Mat_<double>(1, 5) <<
-            0.069434162778783, -0.115882071309996, 0.00979426351016958, -0.000953149415242267, 0.0);
+            -0.078367305534218, 0.189027175567762, 0.0, 0.0, 0.0);
         
         // 立体相机外参
         cv::Mat rotation_matrix = (cv::Mat_<double>(3, 3) <<
-            0.999896877234412, -0.00220178317092368, -0.0141910904351714,
-            0.00221406478831849, 0.999997187880575, 0.00084979294881938,
-            0.0141891794683169, -0.000881125309460678, 0.999898940295571);
+            0.999994748672584, 0.000900583356631161, -0.00311312975544192,
+            -0.000920823827737079, 0.999978409580914, -0.00650633963945301,
+            0.00310720304047395, 0.00650917211659093, 0.99997398764549);
         
         cv::Mat translation_vector = (cv::Mat_<double>(3, 1) <<
-            -60.8066968317226, 0.142395217396486, -1.92683450371277);
+            -33.3635501042902, -0.0881041164814825, -0.209222881945699);
         
         // 设置标定数据
         calibration_.left_camera = CameraIntrinsics(left_camera_matrix, left_distortion);
@@ -97,9 +97,12 @@ bool StereoCamera::open_camera() {
         }
         
         // 设置相机参数
-        capture_->set(cv::CAP_PROP_FRAME_WIDTH, frame_size_.width);
-        capture_->set(cv::CAP_PROP_FRAME_HEIGHT, frame_size_.height);
-        capture_->set(cv::CAP_PROP_FOURCC, cv::VideoWriter::fourcc('M', 'J', 'P', 'G'));
+        bool width_ok = capture_->set(cv::CAP_PROP_FRAME_WIDTH, frame_size_.width);
+        bool height_ok = capture_->set(cv::CAP_PROP_FRAME_HEIGHT, frame_size_.height);
+        bool fourcc_ok = capture_->set(cv::CAP_PROP_FOURCC, cv::VideoWriter::fourcc('M', 'J', 'P', 'G'));
+        
+        std::cout << "[DEBUG] 参数设置结果: Width=" << width_ok << ", Height=" << height_ok 
+                  << ", FourCC=" << fourcc_ok << std::endl;
         
         // 验证实际设置的分辨率
         int actual_width = static_cast<int>(capture_->get(cv::CAP_PROP_FRAME_WIDTH));
@@ -148,8 +151,17 @@ bool StereoCamera::capture_frame(cv::Mat& left_frame, cv::Mat& right_frame) {
         return false;
     }
     
+    // 添加调试信息
+    static int debug_count = 0;
+    if (debug_count < 5) {
+        std::cout << "[DEBUG] 帧尺寸: " << frame.cols << "x" << frame.rows 
+                  << ", 期望: " << frame_size_.width << "x" << frame_size_.height << std::endl;
+        debug_count++;
+    }
+    
     if (!validate_frame_size(frame)) {
-        std::cerr << "[ERROR] 帧尺寸不匹配" << std::endl;
+        std::cerr << "[ERROR] 帧尺寸不匹配: 实际(" << frame.cols << "x" << frame.rows 
+                  << ") vs 期望(" << frame_size_.width << "x" << frame_size_.height << ")" << std::endl;
         return false;
     }
     

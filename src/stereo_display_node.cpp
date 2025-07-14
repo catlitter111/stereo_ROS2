@@ -40,13 +40,13 @@ public:
         
         // 创建图像订阅者 - 修正话题名称匹配实际发布的话题
         image_sub_ = this->create_subscription<sensor_msgs::msg::Image>(
-            "/stereo/left/image_raw", 10,
+            "/stereo_camera/left/image_raw", 10,
             std::bind(&StereoDisplayNode::image_callback, this, std::placeholders::_1)
         );
         
         // 创建距离服务客户端 - 修正服务名称匹配实际提供的服务
         distance_client_ = this->create_client<stereo_camera_cpp::srv::GetDistance>(
-            "/stereo/get_distance"
+            "/stereo_camera/stereo/get_distance"
         );
         
         // 初始化状态变量
