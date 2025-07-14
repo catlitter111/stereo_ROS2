@@ -9,6 +9,9 @@
 #include <atomic>
 #include <thread>
 #include <mutex>
+#include <sstream>
+#include <iomanip>
+#include <cmath>
 
 class StereoDisplayNode : public rclcpp::Node {
 public:
@@ -287,8 +290,8 @@ private:
             if (!service_connected_) {
                 texts.push_back("Distance: Service Offline");
                 if (!last_error_message_.empty()) {
-                    // 截断长错误信息以适应显示
-                    std::string error_display = last_error_message_;
+                    // 安全地处理错误信息，避免显示乱码
+                    std::string error_display = clean_error_message(last_error_message_);
                     if (error_display.length() > 30) {
                         error_display = error_display.substr(0, 27) + "...";
                     }
@@ -297,16 +300,23 @@ private:
             } else if (distance_valid_ && last_distance_time_.nanoseconds() > 0) {
                 auto time_diff = (now - last_distance_time_).seconds();
                 if (time_diff < 2.0) {  // 2秒内的数据被认为是有效的
-                    std::string distance_text = "Distance: " + 
-                        std::to_string(last_distance_).substr(0, 5) + "m";
+                    // 安全的距离格式化
+                    std::string distance_text;
+                    if (std::isfinite(last_distance_) && last_distance_ > 0 && last_distance_ < 100.0) {
+                        std::ostringstream oss;
+                        oss << std::fixed << std::setprecision(2) << last_distance_;
+                        distance_text = "Distance: " + oss.str() + "m";
+                    } else {
+                        distance_text = "Distance: Invalid";
+                    }
                     texts.push_back(distance_text);
                 } else {
                     texts.push_back("Distance: Data Outdated");
                 }
             } else {
                 if (!last_error_message_.empty()) {
-                    // 显示具体错误信息而不是泛泛的"Waiting"
-                    std::string error_display = last_error_message_;
+                    // 安全地处理错误信息，避免显示乱码
+                    std::string error_display = clean_error_message(last_error_message_);
                     if (error_display.length() > 25) {
                         error_display = error_display.substr(0, 22) + "...";
                     }
@@ -385,6 +395,28 @@ private:
                 RCLCPP_WARN_ONCE(this->get_logger(), "窗口事件处理异常: %s", e.what());
             }
         }
+    }
+    
+    // 清理错误信息，确保只包含可显示的ASCII字符
+    std::string clean_error_message(const std::string& message) {
+        std::string cleaned;
+        cleaned.reserve(message.length());
+        
+        for (char c : message) {
+            if (c >= 32 && c <= 126) {  // 可打印ASCII字符
+                cleaned += c;
+            } else if (c == '\n' || c == '\r') {
+                cleaned += ' ';  // 换行符替换为空格
+            }
+            // 跳过其他不可打印字符（包括中文字符）
+        }
+        
+        // 如果清理后为空，提供默认信息
+        if (cleaned.empty()) {
+            cleaned = "Unknown Error";
+        }
+        
+        return cleaned;
     }
     
     // 成员变量
